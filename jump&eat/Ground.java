@@ -3,30 +3,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Ground extends Actor
 {
+    private int speed;
     
-    
-    public Ground()
+    public Ground(int speed)
     {
         
         GreenfootImage image = getImage();
-        image.scale(image.getWidth() /10, image.getHeight() /10);
+        image.scale(image.getWidth() /10, image.getHeight() /16);
         setImage(image);
+        this.speed = speed;
         
     }
+    
     
     public void act() 
     {
-        moveLeftRight(0);
-    } 
-    
-    public void moveLeftRight(int speed)
-    {
-        move(speed);
-        
-        if(getX() >= getWorld().getWidth() - getImage().getWidth()/2 || getX() <= getImage().getWidth()/2)
-        {
-            turn(180);
-        }
+        moveLeftRight();
     }
-            
+    
+    
+    public void moveLeftRight()
+    {
+         move(this.speed);
+         if(getX() >= getWorld().getWidth() - getImage().getWidth()/2 || getX() <= getImage().getWidth()/2)
+         {
+             turn(180);
+         }       
+    }
+           
 }

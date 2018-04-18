@@ -6,7 +6,9 @@ public class Star extends Actor
     
     public void act() 
     {
-        moveAround();// Add your action code here.
+        moveAround();
+        disappear();
+        
     }
     
     public void moveAround()
@@ -23,6 +25,15 @@ public class Star extends Actor
         if(getY() <= 5 || getY() >= getWorld().getHeight() - 5)
         {
             turn(180);
+        }
+    }
+    
+    public void disappear()
+    {
+        Actor jumper = getOneIntersectingObject(Jumper.class);
+        if(jumper != null)
+        {
+            getWorld().removeObject(this);
         }
     }
 }
