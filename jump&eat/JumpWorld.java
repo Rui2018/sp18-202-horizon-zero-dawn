@@ -12,6 +12,7 @@ public class JumpWorld extends World
     private Jumper jumper = new Jumper();
     private Score score = new Score();
     private int totalStar = 10;
+    private boolean corner = false;
     
     public JumpWorld()
     {    
@@ -71,7 +72,14 @@ public class JumpWorld extends World
     
     public void createEnemy() {
         Enemy enemy = new Enemy();
-        addObject(enemy, 900, 500);
+        int x = corner? 0:900;
+        addObject(enemy, x, 500); 
+        if(corner){
+            corner = false;
+        }
+        else{
+            corner = true;
+        }
         this.jumper.registerObserver(enemy);
     }
     
