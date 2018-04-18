@@ -1,7 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+import java.util.ArrayList;
 
-
-public class Jumper extends Mover
+public class Jumper extends Mover implements Subject
 {
     private int speed = 7;
     private int vSpeed = 0;
@@ -9,13 +10,35 @@ public class Jumper extends Mover
     private int jumpStrength = 16;
     private boolean jumping;
     private int direction;
+    private List<Observer> observers = new ArrayList<>();
     
     
     public void act() 
     {
+        
         checkFall();
         checkKeys();
+        notifyObserver();
         checkGameOver();
+        
+        
+    }
+    
+    public void registerObserver(Observer observer)
+    {
+        observers.add(observer);
+    }
+    public void removeObserver(Observer observer)
+    {
+        int index = observers.indexOf(observer);
+        observers.remove(index);
+    }
+    public void notifyObserver()
+    {
+        for(Observer observer : observers)
+        {
+            observer.update(getX(), getY());
+        }
         
     }
     
@@ -50,7 +73,8 @@ public class Jumper extends Mover
     
     public void checkGameOver()
     {
-        if(getY() >= getWorld().getHeight())
+        Actor enemy = getOneIntersectingObject(Enemy.class);
+        if(getY() >= getWorld().getHeight() - 1 || enemy != null)
         {
             GameOver gameOver = new GameOver();
             getWorld().addObject(gameOver, getWorld().getWidth()/2, getWorld().getHeight()/2);
