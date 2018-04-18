@@ -47,16 +47,19 @@ public class JumpWorld extends World
     {
         addObject(new Ground(0), 20, 80);
         addObject(new Ground(0), 100, 450);
-        addObject(new Ground(0), 400, 450);
+        addObject(new Ground(0), 450, 450);
         addObject(new Ground(0), 800, 450);
         addObject(new Ground(-2), 150, 400);
-        addObject(new Ground(1), 150, 400);
+        addObject(new Ground(1), 550, 400);
         addObject(new Ground(1), 800, 350);
         addObject(new Ground(-1), 200, 300);
-        addObject(new Ground(1), 30, 150);
-        addObject(new Ground(-3), 150, 200);
-        addObject(new Ground(1), 120, 200);
-        addObject(new Ground(1), 200, 300);
+        addObject(new Ground(1), 600, 300);
+        addObject(new Ground(1), 420, 250);
+        addObject(new Ground(-3), 500, 200);
+        addObject(new Ground(1), 700, 150);
+        
+        
+        
         
     }
     public void createStars()
