@@ -14,7 +14,7 @@ public class JumpWorld extends World
     private int totalStar = 10;
     private boolean corner = false;
     GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
-    private boolean win_flag = false;
+    private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
     
     public JumpWorld()
     {    
@@ -40,7 +40,7 @@ public class JumpWorld extends World
         {
             Win win = new Win();
             addObject(win, getWidth()/2, getHeight()/2);
-            win_flag = true;
+            win_flag = 1;
             Greenfoot.stop();
         }
     }
@@ -91,10 +91,10 @@ public class JumpWorld extends World
     public void stopped() {
       
         sound.stop();
-        if(win_flag) {
+        if(win_flag == 1) {
             Greenfoot.playSound("youwin.mp3");
         }
-        else {
+        else if(win_flag == -1){
             Greenfoot.playSound("gameover.wav");
         }
     }
@@ -102,6 +102,10 @@ public class JumpWorld extends World
     public void started(){
        sound.setVolume(50);
         sound.playLoop();
+    }
+    
+    public void setLose(){
+        win_flag = -1;
     }
     
 }
