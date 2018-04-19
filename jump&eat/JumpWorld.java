@@ -13,6 +13,8 @@ public class JumpWorld extends World
     private Score score = new Score();
     private int totalStar = 10;
     private boolean corner = false;
+    GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
+    private boolean win_flag = false;
     
     public JumpWorld()
     {    
@@ -23,7 +25,6 @@ public class JumpWorld extends World
         createStars();
         createGround();
         createEnemy();
-        
         score.setScore(0);
         this.timer.mark();
     }
@@ -39,6 +40,7 @@ public class JumpWorld extends World
         {
             Win win = new Win();
             addObject(win, getWidth()/2, getHeight()/2);
+            win_flag = true;
             Greenfoot.stop();
         }
     }
@@ -84,6 +86,22 @@ public class JumpWorld extends World
             corner = true;
         }
         this.jumper.registerObserver(enemy);
+    }
+    
+    public void stopped() {
+      
+        sound.stop();
+        if(win_flag) {
+            Greenfoot.playSound("youwin.mp3");
+        }
+        else {
+            Greenfoot.playSound("gameover.wav");
+        }
+    }
+    
+    public void started(){
+       sound.setVolume(50);
+        sound.playLoop();
     }
     
 }

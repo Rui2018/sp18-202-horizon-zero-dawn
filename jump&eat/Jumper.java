@@ -61,12 +61,13 @@ public class Jumper extends Mover implements Subject
         if(Greenfoot.isKeyDown("space") && jumping == false)
         {      
             jump();
+            Greenfoot.playSound("nsmbwiiJump.wav");
         }
         
         if("s".equals(Greenfoot.getKey()))
         {      
             shoot();
-            
+            Greenfoot.playSound("nsmbwiiFireBall.wav");
         }
     }
     
@@ -77,6 +78,7 @@ public class Jumper extends Mover implements Subject
         if(getY() >= getWorld().getHeight() - 1 || enemy != null)
         {
             GameOver gameOver = new GameOver();
+            
             getWorld().addObject(gameOver, getWorld().getWidth()/2, getWorld().getHeight()/2);
             Greenfoot.stop();
         }

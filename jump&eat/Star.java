@@ -34,6 +34,8 @@ public class Star extends Actor
         if(jumper != null)
         {
             getWorld().removeObject(this);
+            Greenfoot.playSound("nsmbwiiCoin.wav");
         }
+        
     }
 }
