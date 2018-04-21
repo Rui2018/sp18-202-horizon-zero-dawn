@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Star
+comment0.text=\n\ The\ star\ is\ the\ target\ for\ the\ jumper\ to\ eat.\ \n\ "Eat"\ means\ the\ jumper\ catches\ (touches)\ the\ star,\ then\ the\ star\ will\ disappear.\n\ Stars\ motion\ are\ random.\n\ When\ the\ stars\ meet\ (touch)\ the\ edge\ of\ the\ world,\ the\ ground,\ or\ the\ enemy,\ it\ \n\ will\ rebound.\n\ \n\ @\ Rui\ Guo\ \n\ @\ 04/20/2018\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Star\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment2.params=
+comment2.target=void\ turn()
+comment3.params=
+comment3.target=void\ disappear()
+numComments=4
