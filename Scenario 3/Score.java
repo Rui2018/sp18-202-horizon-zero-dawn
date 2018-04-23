@@ -1,19 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Jumper here.
+ * Write a description of class Score here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Jumper extends Mover
+public class Score extends Actor
 {
     /**
-     * Act - do whatever the Jumper wants to do. This method is called whenever
+     * Act - do whatever the Score wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public Score() 
     {
         // Add your action code here.
-    }    
+    } 
+    
+    public void setScore(int score){
+        
+    }
 }

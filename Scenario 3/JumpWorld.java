@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Win: the jumper catches all the stars.
  * GameOver: the jumper drop out or meets (touches) enemies.
  * 
- * @ Rui Guo 
- * @ 04/20/2018
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class JumpWorld extends World
 {
@@ -19,12 +19,16 @@ public class JumpWorld extends World
      * 
      */
     private int totalStars = 5;
+    private int stoneSpeed = 5;
     
     public JumpWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         createStars();
+        createStones();
+        createGround();
+        createBullet();
     }
     
     //Create stars at random position
@@ -32,6 +36,31 @@ public class JumpWorld extends World
         for(int i = 0; i < totalStars; i++){
             addObject(new Star(), Greenfoot.getRandomNumber(300), Greenfoot.getRandomNumber(200));
         }
+    }
+    
+    public void createEnamies(){
+        Enemy enemy = new Enemy();
         
+    }
+    
+    public void createStones(){
+        //Stone stone = new Stone(stoneSpeed);
+        for(int i = 0; i < 5; i++){
+            addObject(new Stone(), Greenfoot.getRandomNumber(300), 0);
+        }
+        
+    }
+    
+    public void createGround(){
+        addObject(new Ground(0), 20, 80);
+        addObject(new Ground(1), 550, 350);
+        addObject(new Ground(-1), 50, 50);
+    
+    }
+    
+    public void createBullet(){
+        addObject(new Bullet(1), 100, 100);
+        addObject(new Bullet(2), 200, 200);
+    
     }
 }

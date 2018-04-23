@@ -7,19 +7,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * When the stars meet (touch) the edge of the world, the ground, or the enemy, it 
  * will rebound.
  * 
- * @ Rui Guo 
- * @ 04/20/2018
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class Star extends Actor
 {
+    private int speed = 5;
     /**
      * Act - do whatever the Star wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        //The move distance is 5.
-        move(5);
+        move(speed);
         turn();
         disappear();
         // Add your action code here.
