@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ShootState
+comment0.text=\n\ Write\ a\ description\ of\ class\ ShootState\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ act_jump()
+comment2.params=
+comment2.target=void\ act_shoot()
+comment3.params=
+comment3.target=void\ act_chatchstar()
+numComments=4
