@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=SimpleTimer
-comment0.text=\n\ Write\ a\ description\ of\ class\ SimpleTimer\ here.\n\ A\ simple\ timer\ class\ that\ allows\ you\ to\ keep\ track\ of\ how\ much\ time\ has\ passed\ between\ events.\n\ \n\ @Neil\ Brown\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ SimpleTimer\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=void\ mark()
-comment1.text=\n\ Marks\ the\ current\ time.\n
-comment2.params=
-comment2.target=int\ millisElapsed()
-comment2.text=\n\ Return\ the\ amount\ of\ ms\ that\ have\ elapsed\ since\ mark()\ last\ called.\n
+comment1.target=SimpleTimer()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ SimpleTimer\n
+comment2.params=y
+comment2.target=int\ sampleMethod(int)
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
 numComments=3
