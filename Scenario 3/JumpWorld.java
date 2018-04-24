@@ -20,15 +20,45 @@ public class JumpWorld extends World
     private int totalStars = 5;
     private int stoneSpeed = 5;
     private int bulletSpeed = 5;
+    private Jumper jumper = new Jumper();
+    private boolean flag = false;
+    private int winFlag = 0;
+    //0: ongoing, -1: lose, 1: win
+    private SimpleTimer timer = new SimpleTimer();
+    GreenfootSound bgmBackGround = new GreenfootSound("nyan_cat.mp3");
     
     public JumpWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        addObject(jumper, 30, 30);
         createStars();
         createStones();
         createGround();
-        createBullet();
+        createEnemies();
+        timer.mark();
+        //bgmBackGround.setVolume(20);
+        //bgmBackGround.playLoop();
+        
+    }
+    
+    public void act(){
+        //bgmBackGround.setVolume(20);
+        //bgmBackGround.playLoop();
+        if(timer.millisElapsed() > 1500){
+            createEnemies();
+            timer.mark();
+            
+        }
+        int count = getObjects(Star.class).size();
+        if(count == 0){
+            Win win = new Win();
+            addObject(win, getWidth()/2, getHeight()/2);
+            winFlag = 1;
+            Greenfoot.stop();
+        }
+        
+    
     }
     
     //Create stars at random position
@@ -38,8 +68,23 @@ public class JumpWorld extends World
         }
     }
     
-    public void createEnamies(){
+    public void createEnemies(){
         Enemy enemy = new Enemy();
+        int x;
+        if(flag){
+            x = 0;
+        }
+        else{
+            x = 600;
+        }
+        addObject(enemy, x, 400);
+        if(flag){
+            flag = false;
+        }
+        else{
+            flag = true;
+        }
+        jumper.registerO(enemy);
         
     }
     
@@ -54,7 +99,7 @@ public class JumpWorld extends World
     public void createGround(){
         addObject(new Ground(0), 20, 80);
         addObject(new Ground(1), 550, 350);
-        addObject(new Ground(-1), 50, 50);
+        addObject(new Ground(-1), 50, 100);
     
     }
     
@@ -70,4 +115,14 @@ public class JumpWorld extends World
     
     public void Victory(){
     }
+    
+    public void started(){
+        bgmBackGround.play();
+        bgmBackGround.playLoop();
+    }
+    
+    public void stopped(){
+        bgmBackGround.pause();
+    }
+    
 }

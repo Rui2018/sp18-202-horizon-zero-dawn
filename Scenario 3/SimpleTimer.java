@@ -1,30 +1,27 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * Write a description of class SimpleTimer here.
+ * A simple timer class that allows you to keep track of how much time has passed between events.
  * 
- * @author (your name) 
+ * @Neil Brown 
  * @version (a version number or a date)
  */
-public class SimpleTimer  
+public class SimpleTimer extends Actor
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private long lastMark = System.currentTimeMillis();
     /**
-     * Constructor for objects of class SimpleTimer
+     * Marks the current time.
      */
-    public SimpleTimer()
-    {
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+    public void mark(){
+        lastMark = System.currentTimeMillis();
+    
+    } 
+    
+     /**
+     * Return the amount of ms that have elapsed since mark() last called.
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public int millisElapsed(){
+        return (int) (System.currentTimeMillis() - lastMark);
     }
 }
