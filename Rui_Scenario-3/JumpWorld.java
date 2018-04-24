@@ -110,10 +110,12 @@ public class JumpWorld extends World
     }
     
     public void Lose(){
+        winFlag = -1;
         
     }
     
     public void Victory(){
+        winFlag = 1;
     }
     
     public void started(){
