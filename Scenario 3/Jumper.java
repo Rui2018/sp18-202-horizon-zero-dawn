@@ -29,7 +29,7 @@ public class Jumper extends Actor implements Subject
         checkKey();
         notifyO();
         ifGameOver();
-        ifWin();
+        //ifWin();
         
         // Add your action code here.
     } 
@@ -84,15 +84,15 @@ public class Jumper extends Actor implements Subject
         }
     }
     
-    public void ifWin(){
-        Actor star = getOneIntersectingObject(Star.class);
-        if(getObjects(Star.class).size() == 0){
-            Win win = new Win();
-            getWorld().addObject(win, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
-            ((JumpWorld)getWorld()).Victory();
-            Greenfoot.stop();
-        }
-    }
+    //public void ifWin(){
+        //Actor star = getOneIntersectingObject(Star.class);
+        //if(getObjects(Star.class).size() == 0){
+           // Win win = new Win();
+           // getWorld().addObject(win, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+            //((JumpWorld)getWorld()).Victory();
+           // Greenfoot.stop();
+       // }
+   // }
     
     public boolean onGround(){
         Actor under = getOneObjectAtOffset(0, getImage().getHeight() / 2, Ground.class);
@@ -119,13 +119,13 @@ public class Jumper extends Actor implements Subject
     
     public void shoot(){
         Actor bullet = new Bullet();
-        getWorld.addObject(bullet, getX(), getY());
-        if(getImage() == ""){
-            bullet.setRotation(0);
-        }
-        else{
-            bullet.setRotation(180);
-        }
+        //getWorld.addObject(bullet, getX(), getY());
+        //if(getImage() == ""){
+            //bullet.setRotation(0);
+        //}
+        //else{
+           // bullet.setRotation(180);
+       // }
     
     }
     
