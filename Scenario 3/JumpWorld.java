@@ -13,13 +13,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class JumpWorld extends World
 {
-
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
     private int totalStars = 5;
     private int stoneSpeed = 5;
+    private int bulletSpeed = 5;
     
     public JumpWorld()
     {    
@@ -59,8 +59,15 @@ public class JumpWorld extends World
     }
     
     public void createBullet(){
-        addObject(new Bullet(1), 100, 100);
-        addObject(new Bullet(2), 200, 200);
+        addObject(new Bullet(), 100, 100);
+        addObject(new Bullet(), 200, 200);
     
+    }
+    
+    public void Lose(){
+        
+    }
+    
+    public void Victory(){
     }
 }

@@ -8,16 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor
 {
-    private int speed;
+    private int speed = 5;
     
     /**
      * Act - do whatever the Bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Bullet(int speed){
-        this.speed = speed;
+    //public Bullet(int speed){
+       // this.speed = speed;
     
-    }
+    //}
     
     public void act() 
     {

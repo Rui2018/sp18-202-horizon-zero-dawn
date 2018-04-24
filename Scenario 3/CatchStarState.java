@@ -4,27 +4,13 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CatchStarState extends State 
+public class CatchStarState implements State 
 {
     // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class CatchStarState
-     */
-    public CatchStarState()
-    {
+     public void act_jump(){
+        System.out.println("");
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
+    public void act_shoot(){}
+    public void act_chatchstar(){}
 }
