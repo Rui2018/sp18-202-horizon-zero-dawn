@@ -25,7 +25,7 @@ public class JumpWorld extends World
     private int winFlag = 0;
     //0: ongoing, -1: lose, 1: win
     private SimpleTimer timer = new SimpleTimer();
-    GreenfootSound bgmBackGround = new GreenfootSound("nyan_cat.mp3");
+    GreenfootSound bgmBackGround = new GreenfootSound("BackGround.mp3");
     
     public JumpWorld()
     {    
@@ -100,20 +100,25 @@ public class JumpWorld extends World
         addObject(new Ground(0), 20, 80);
         addObject(new Ground(1), 550, 350);
         addObject(new Ground(-1), 50, 100);
+        addObject(new Ground(0), 200, 150);
+        addObject(new Ground(-1), 150, 200);
+        addObject(new Ground(0), 300, 250);
     
     }
     
-    public void createBullet(){
-        addObject(new Bullet(), 100, 100);
-        addObject(new Bullet(), 200, 200);
-    
-    }
+    //public void createBullet(){
+        //addObject(new Bullet(), 100, 100);
+       // addObject(new Bullet(), 200, 200);
+    //
+    //}
     
     public void Lose(){
+        winFlag = -1;
         
     }
     
     public void Victory(){
+        winFlag = 1;
     }
     
     public void started(){

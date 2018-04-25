@@ -31,7 +31,7 @@ public class Ground extends Actor
     //When the ground meet the edge, turn. 
     public void move(){
         move(speed);
-        if(getX() >= getWorld().getWidth() - getImage().getWidth() || getX() <= 0){
+        if(getX() > getWorld().getWidth() - getImage().getWidth() || getX() <= 0){
             turn(180);
         }
     }

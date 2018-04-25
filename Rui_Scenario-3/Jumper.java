@@ -17,6 +17,8 @@ public class Jumper extends Actor implements Subject
     private int jumpHeight = 10;
     private int onGroundspeed;
     private List<Observer> observers = new ArrayList<>();
+    Bullet bullet = new Bullet();
+    private int oriention;
     
     
     /**
@@ -45,26 +47,28 @@ public class Jumper extends Actor implements Subject
     
     public void checkKey(){
         if(Greenfoot.isKeyDown("left")){
-            setImage("");
+            setImage("jumper_left.png");
             moveLeft();
+            oriention = 180;
         }
         if(Greenfoot.isKeyDown("right")){
-            setImage("");
+            setImage("jumper_right.png");
             moveRight();
+            oriention = 0;
         }
         if(Greenfoot.isKeyDown("space")){
             jump();
             /**
              * needs to add sound here
              */
-            Greenfoot.playSound("");
+            Greenfoot.playSound("Jump.wav");
         }
         if(Greenfoot.isKeyDown("s")){
             shoot();
             /**
              * needs to add sound here
              */
-            Greenfoot.playSound("");
+            Greenfoot.playSound("Shoot.wav");
         }
     }
     
@@ -76,7 +80,13 @@ public class Jumper extends Actor implements Subject
     
     public void ifGameOver(){
         Actor enemy = getOneIntersectingObject(Enemy.class);
-        if(enemy != null || getY() > getWorld().getHeight() - 1){
+        if(enemy != null){
+            GameOver gameover = new GameOver();
+            getWorld().addObject(gameover, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+            ((JumpWorld)getWorld()).Lose();
+            Greenfoot.stop();
+        }
+        else if(getY() > getWorld().getHeight() - 10){
             GameOver gameover = new GameOver();
             getWorld().addObject(gameover, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             ((JumpWorld)getWorld()).Lose();
@@ -118,14 +128,15 @@ public class Jumper extends Actor implements Subject
     }
     
     public void shoot(){
-        Actor bullet = new Bullet();
-        //getWorld.addObject(bullet, getX(), getY());
-        //if(getImage() == ""){
-            //bullet.setRotation(0);
-        //}
-        //else{
-           // bullet.setRotation(180);
-       // }
+       
+        getWorld().addObject(bullet, 0, 0);
+        bullet.setLocation(getX(), getY());
+        if("jumper_right.png".equals(getImage())){
+            bullet.setRotation(oriention);
+        }
+        else {
+            bullet.setRotation(oriention);
+        }
     
     }
     

@@ -24,25 +24,27 @@ public class Enemy extends Actor implements Observer
     
     public void move(){
         //upper-left
-        if(getX() < X && getY() > Y){
+        if(getX() <= X && getY() >= Y){
             moveDown();
             moveRight();
         }
         //lower-left
-        if(getX() < X && getY() < Y){
+        if(getX() <= X && getY() <= Y){
             moveUp();
             moveRight();
         }
         //upper-right
-        if(getX() > X && getY() > Y){
+        if(getX() >= X && getY() >= Y){
             moveDown();
             moveLeft();
         }
         //lower-right
-        if(getX() > X && getY() < Y){
+        if(getX() >= X && getY() <= Y){
             moveUp();
             moveLeft();    
         }
+       
+        
     }
     
     public void moveLeft(){
@@ -50,7 +52,7 @@ public class Enemy extends Actor implements Observer
     }
     
     public void moveRight(){
-        setLocation(getX() - speed, getY());
+        setLocation(getX() + speed, getY());
     }
     
     public void moveUp(){

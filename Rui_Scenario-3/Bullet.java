@@ -8,8 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor
 {
-    private int speed = 5;
-    
     /**
      * Act - do whatever the Bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,22 +19,25 @@ public class Bullet extends Actor
     
     public void act() 
     {
-        move(speed);
+        move(10);
         disappear();
         // Add your action code here.
     }  
     
     public void disappear(){
-        if(getX() > getWorld().getWidth() - 1){
+        Actor enemy = getOneIntersectingObject(Enemy.class);
+        if(enemy != null){
+           getWorld().removeObject(enemy);
+           getWorld().removeObject(this);
+        }
+        
+        else if(getX() > getWorld().getWidth() - 1){
             getWorld().removeObject(this);
         }
         else if (getX() < 1){
             getWorld().removeObject(this);
         }
         else if(getY() > getWorld().getHeight() - 1){
-            getWorld().removeObject(this);
-        }
-        else{
             getWorld().removeObject(this);
         }
     
