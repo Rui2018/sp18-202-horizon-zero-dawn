@@ -10,10 +10,11 @@ import java.util.ArrayList;
  */
 public class Jumper extends Mover implements Subject
 {
-    private int speed = 7;
+    private int speed = 5;
     private int vSpeed = 0;
+    private int groundSpeed = 10;
     private int acceleration = 2;
-    private int jumpStrength = 16;
+    private int jumpStrength = 25;
     private boolean jumping;
     private int direction;
     private List<Observer> observers = new ArrayList<>();
@@ -129,14 +130,17 @@ public class Jumper extends Mover implements Subject
         int yDistance = (int) (spriteHeight/2 + 5);
         
         Actor ground = getOneObjectAtOffset(0, getImage().getHeight()/2, Ground.class);
+        
         if(ground == null)
         {
             jumping = true;
+            
             return false;
         }
         else
         {
             moveToGround(ground);
+            //groundSpeed=2;
             return true;
         }
         
@@ -172,5 +176,13 @@ public class Jumper extends Mover implements Subject
         setLocation(getX() + speed, getY());
     }
     
+   private int getGroundSpeed(){
+       int gspeed=0;
+       int currentY=this.getY();
+       return gspeed;
+    }
     
+   private void moveByGround(){
+       setLocation(getX()+groundSpeed,getY());
+    }
 }

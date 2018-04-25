@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DesertWorld extends World
 {
-
+    private int groundSpeed=0;
     private SimpleTimer timer = new SimpleTimer();
     private Jumper jumper = new Jumper();
     private Score score = new Score();
@@ -58,14 +58,14 @@ public class DesertWorld extends World
         addObject(new Ground(0), 100, 450);
         addObject(new Ground(0), 450, 450);
         addObject(new Ground(0), 800, 450);
-        addObject(new Ground(0), 150, 400);
+       
         addObject(new Ground(1), 550, 400);
         addObject(new Ground(1), 800, 350);
-        addObject(new Ground(0), 200, 300);
-        addObject(new Ground(0), 600, 300);
+        addObject(new Ground(-2), 200, 300);
+        
         addObject(new Ground(0), 420, 250);
-        addObject(new Ground(0), 500, 200);
-        addObject(new Ground(0), 700, 150);
+        addObject(new Ground(2), 500, 200);
+        addObject(new Ground(-1), 700, 150);
         
         
         
