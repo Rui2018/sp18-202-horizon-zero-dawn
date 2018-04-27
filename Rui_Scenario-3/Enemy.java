@@ -3,8 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Enemy here.
  * 
- * 
- * @ Rui Guo 
+ * @author (your name) 
  * @version (a version number or a date)
  */
 public class Enemy extends Actor implements Observer
@@ -67,11 +66,13 @@ public class Enemy extends Actor implements Observer
         Actor bullet = getOneIntersectingObject(Bullet.class);
         if(bullet != null){
             getWorld().removeObject(bullet);
-            getWorld().removeObject(this);
+            getWorld().removeObject(this); 
         }
     }
+    
     public void update(int x, int y){
         X = x;
         Y = y;
     }
+        
 }

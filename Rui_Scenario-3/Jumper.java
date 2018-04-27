@@ -4,22 +4,28 @@ import java.util.ArrayList;
 
 /**
  * Write a description of class Jumper here.
+ * The jumper can be controled by keyboard. It can move left and right, can jump and
+ * shoot.
+ * If the jumper fall, it will die.
+ * If the jumoer meets(catch) the enemy, it will die. But it can shoot to kill enemy.
+ * When the jumer catch all the stars, WIN!
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class Jumper extends Actor implements Subject
-
 {
-    private int speed = 5; 
+    private int speed = 5;
     private int vSpeed = 0;
     private int acceleration = 2;
-    private int jumpHeight = 10;
-    private int onGroundspeed;
+    private int groundSpeed = 10;
+    private int jumpHeight = 15;
+    private int onGroundSpeed;
+    private boolean jumping;
     private List<Observer> observers = new ArrayList<>();
     Bullet bullet = new Bullet();
     private int oriention;
-    
+    Command slot;
     
     /**
      * Act - do whatever the Jumper wants to do. This method is called whenever
@@ -28,24 +34,25 @@ public class Jumper extends Actor implements Subject
     public void act() 
     {
         ifFall();
-        checkKey();
-        notifyO();
+        checkKeys();
+        notifyObserver();
         ifGameOver();
         //ifWin();
         
         // Add your action code here.
-    } 
+    }
     
     public void ifFall(){
         if(onGround()){
-            vSpeed = 0;    
+            vSpeed = 0;
         }
         else{
             fall();
         }
     }
     
-    public void checkKey(){
+    private void checkKeys()
+    {
         if(Greenfoot.isKeyDown("left")){
             setImage("jumper_left.png");
             moveLeft();
@@ -56,26 +63,21 @@ public class Jumper extends Actor implements Subject
             moveRight();
             oriention = 0;
         }
-        if(Greenfoot.isKeyDown("space")){
+        if(Greenfoot.isKeyDown("space") && jumping == false){      
             jump();
-            /**
-             * needs to add sound here
-             */
-            Greenfoot.playSound("Jump.wav");
+            Greenfoot.playSound("nsmbwiiJump.wav");
         }
-        if(Greenfoot.isKeyDown("s")){
+        if("s".equals(Greenfoot.getKey())){      
             shoot();
-            /**
-             * needs to add sound here
-             */
-            Greenfoot.playSound("Shoot.wav");
+            Greenfoot.playSound("nsmbwiiFireBall.wav");
         }
     }
     
-    public void notifyO(){
+     public void notifyObserver(){
         for(Observer observer : observers){
             observer.update(getX(), getY());
         }
+        
     }
     
     public void ifGameOver(){
@@ -86,8 +88,8 @@ public class Jumper extends Actor implements Subject
             ((JumpWorld)getWorld()).Lose();
             Greenfoot.stop();
         }
-        else if(getY() > getWorld().getHeight() - 10){
-            GameOver gameover = new GameOver();
+        else if(getY() >= getWorld().getHeight() - 10){
+            GameOver gameover = new GameOver(); 
             getWorld().addObject(gameover, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             ((JumpWorld)getWorld()).Lose();
             Greenfoot.stop();
@@ -97,21 +99,39 @@ public class Jumper extends Actor implements Subject
     //public void ifWin(){
         //Actor star = getOneIntersectingObject(Star.class);
         //if(getObjects(Star.class).size() == 0){
-           // Win win = new Win();
-           // getWorld().addObject(win, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+            //Win win = new Win();
+            //getWorld().addObject(win, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             //((JumpWorld)getWorld()).Victory();
-           // Greenfoot.stop();
-       // }
-   // }
+            //Greenfoot.stop();
+        //}
+    //}
     
     public boolean onGround(){
+        int JumperHeight = getImage().getHeight();
+        //int Y = (int) (JumperHeight/2 + 5);
         Actor under = getOneObjectAtOffset(0, getImage().getHeight() / 2, Ground.class);
-        return under != null;
+        //return under != null;
+        if(under == null){
+            jumping = true;
+            return false;
+        }
+        else{
+            moveToGround(under);
+            return true;
+        }
+    }
+    
+    public void moveToGround(Actor ground){
+        int GroundHeight = ground.getImage().getHeight();
+        int Y = ground.getY() - (GroundHeight + getImage().getHeight()) / 2;
+        setLocation(getX(), Y);
+        jumping = false;
     }
     
     public void fall(){
         setLocation(getX(), getY() + vSpeed);
         vSpeed = vSpeed + acceleration;
+        jumping = true;
     }
     
     public void moveLeft(){
@@ -123,34 +143,32 @@ public class Jumper extends Actor implements Subject
     }
     
     public void jump(){
-        vSpeed = - jumpHeight;
+        vSpeed = - jumpHeight; 
+        jumping = true;
         fall();
     }
     
     public void shoot(){
-       
-        getWorld().addObject(bullet, 0, 0);
-        bullet.setLocation(getX(), getY());
+        Actor bullet = new Bullet();
+        getWorld().addObject(bullet, getX(), getY());
         if("jumper_right.png".equals(getImage())){
             bullet.setRotation(oriention);
         }
-        else {
-            bullet.setRotation(oriention);
+        else{
+            bullet.setRotation(oriention); 
         }
-    
+        
     }
     
-    public void registerO(Observer observer){
+    public void registerObserver(Observer observer){
         observers.add(observer);
-    
+        
     }
     
-    public void removeO(Observer observer){
+    public void removeObserver(Observer observer){
         int index = observers.indexOf(observer);
         observers.remove(index);
-    
+        
     }
-    
-    
-    
+   
 }
