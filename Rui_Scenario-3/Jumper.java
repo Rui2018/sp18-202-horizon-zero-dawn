@@ -82,7 +82,14 @@ public class Jumper extends Actor implements Subject
     
     public void ifGameOver(){
         Actor enemy = getOneIntersectingObject(Enemy.class);
+        Actor stone = getOneIntersectingObject(Stone.class);
         if(enemy != null){
+            GameOver gameover = new GameOver();
+            getWorld().addObject(gameover, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+            ((JumpWorld)getWorld()).Lose();
+            Greenfoot.stop();
+        }
+        else if(stone != null){
             GameOver gameover = new GameOver();
             getWorld().addObject(gameover, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             ((JumpWorld)getWorld()).Lose();

@@ -38,6 +38,7 @@ public class JumpWorld extends World
         createStars();
         createGround();
         createEnemies();
+        createStones();
         score.setScore(0);
         timer.mark();
         
@@ -47,8 +48,10 @@ public class JumpWorld extends World
     {
         if(timer.millisElapsed() > 1500 ){
             createEnemies();
+            createStones();
             timer.mark();
         }
+        
         int count = getObjects(Star.class).size();
         score.setScore(count);
         if(count == 0){
@@ -88,6 +91,11 @@ public class JumpWorld extends World
         }
         jumper.registerObserver(enemy);
         
+    }
+    
+    //Create stones one by one.
+    public void createStones(){
+        addObject(new Stone(), Greenfoot.getRandomNumber(400), 0);
     }
     
     //Create 10 grounds, 4 static, 6 move
