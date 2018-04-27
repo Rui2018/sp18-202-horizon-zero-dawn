@@ -95,7 +95,7 @@ public class JumpWorld extends World
     
     //Create stones one by one.
     public void createStones(){
-        addObject(new Stone(), Greenfoot.getRandomNumber(400), 0);
+        addObject(new Stone(), Greenfoot.getRandomNumber(900), 0);
     }
     
     //Create 10 grounds, 4 static, 6 move
