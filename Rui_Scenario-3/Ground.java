@@ -18,7 +18,7 @@ public class Ground extends Actor
         GreenfootImage image = getImage();
         image.scale(image.getWidth() / 3, image.getHeight() / 5);
         setImage(image);
-        this.speed = speed;
+        this.speed = speed; 
     }
     
     //The grounds move left and right.
@@ -26,13 +26,19 @@ public class Ground extends Actor
     {
         // Add your action code here.
         move();
+        Actor jumper = getOneObjectAtOffset(0,-31,Jumper.class);
+        if (jumper != null){
+            jumper.setLocation(jumper.getX() + speed, jumper.getY() );
+        }
     }
     
     //When the ground meet the edge, turn. 
     public void move(){
-        move(speed);
-        if(getX() > getWorld().getWidth() - getImage().getWidth() || getX() <= 0){
-            turn(180);
-        }
+         move(speed);
+         if(getX() > getWorld().getWidth() - getImage().getWidth() || getX() <= 0){
+             speed = -speed;
+         }        
     }
+
+        
 }

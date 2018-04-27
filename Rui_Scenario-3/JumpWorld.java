@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class JumpWorld here.
+ * Write a description of class DesertWorld here.
  * There is 1 jumper, 5 stars, lots of enemies.
  * Move jumper to catch stars and shoot to destroy the enemies.
  * The jumper can stay on the grounds.
@@ -18,47 +18,47 @@ public class JumpWorld extends World
      * 
      */
     private int totalStars = 5;
-    private int stoneSpeed = 5;
+    //private int stoneSpeed = 5;
     private int bulletSpeed = 5;
+    private int groundSpeed = 0;
     private Jumper jumper = new Jumper();
     private boolean flag = false;
     private int winFlag = 0;
-    //0: ongoing, -1: lose, 1: win
+    // 0 means ongoing, -1 means loose, 1 means win
     private SimpleTimer timer = new SimpleTimer();
-    GreenfootSound bgmBackGround = new GreenfootSound("BackGround.mp3");
+    private Score score = new Score();
+    GreenfootSound bgmBackGround = new GreenfootSound("nyan_cat.mp3");
     
-    public JumpWorld()
-    {    
+    
+    public JumpWorld(){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(900, 500, 1);
         addObject(jumper, 30, 30);
+        addObject(score, 830, 15);
         createStars();
-        createStones();
         createGround();
         createEnemies();
+        score.setScore(0);
         timer.mark();
-        //bgmBackGround.setVolume(20);
-        //bgmBackGround.playLoop();
         
     }
     
-    public void act(){
-        //bgmBackGround.setVolume(20);
-        //bgmBackGround.playLoop();
-        if(timer.millisElapsed() > 1500){
+    public void act()
+    {
+        if(timer.millisElapsed() > 1500 ){
             createEnemies();
             timer.mark();
-            
         }
         int count = getObjects(Star.class).size();
+        score.setScore(count);
         if(count == 0){
-            Win win = new Win();
-            addObject(win, getWidth()/2, getHeight()/2);
+            Win smell = new Win();
+            addObject(smell, getWidth()/2, getHeight()/2);
             winFlag = 1;
             Greenfoot.stop();
         }
         
-    
+        
     }
     
     //Create stars at random position
@@ -68,6 +68,7 @@ public class JumpWorld extends World
         }
     }
     
+    //Create enemies one by one
     public void createEnemies(){
         Enemy enemy = new Enemy();
         int x;
@@ -75,46 +76,38 @@ public class JumpWorld extends World
             x = 0;
         }
         else{
-            x = 600;
+            x = 900;
         }
-        addObject(enemy, x, 400);
+        
+        addObject(enemy, x, 500);
         if(flag){
             flag = false;
         }
         else{
             flag = true;
         }
-        jumper.registerO(enemy);
+        jumper.registerObserver(enemy);
         
     }
     
-    public void createStones(){
-        //Stone stone = new Stone(stoneSpeed);
-        for(int i = 0; i < 5; i++){
-            addObject(new Stone(), Greenfoot.getRandomNumber(300), 0);
-        }
-        
-    }
-    
+    //Create 10 grounds, 4 static, 6 move
     public void createGround(){
-        addObject(new Ground(0), 20, 80);
-        addObject(new Ground(1), 550, 350);
-        addObject(new Ground(-1), 50, 100);
-        addObject(new Ground(0), 200, 150);
-        addObject(new Ground(-1), 150, 200);
-        addObject(new Ground(0), 300, 250);
-    
+        addObject(new Ground(0), 20, 70);
+        addObject(new Ground(0), 400, 170);
+        addObject(new Ground(0), 800, 320);
+        addObject(new Ground(0), 300, 420);
+       
+      // addObject(new Ground(1), 200, 180);
+        addObject(new Ground(2), 500, 220);
+        addObject(new Ground(1), 650, 470);
+        
+        addObject(new Ground(-1), 80, 370);
+        addObject(new Ground(-2), 600, 120);
+        addObject(new Ground(-3), 150, 270); 
     }
-    
-    //public void createBullet(){
-        //addObject(new Bullet(), 100, 100);
-       // addObject(new Bullet(), 200, 200);
-    //
-    //}
     
     public void Lose(){
         winFlag = -1;
-        
     }
     
     public void Victory(){
@@ -128,6 +121,13 @@ public class JumpWorld extends World
     
     public void stopped(){
         bgmBackGround.pause();
+        if(winFlag == 1) {
+            Greenfoot.playSound("youwin.mp3");
+        }
+        else if(winFlag == -1){
+            Greenfoot.playSound("gameover.wav");
+        }
     }
+    
     
 }

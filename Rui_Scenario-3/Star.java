@@ -14,7 +14,7 @@ public class Star extends Actor
 {
     private int speed = 5;
     /**
-     * Act - do whatever the Star wants to do. This method is called whenever
+     * Act - do whatever the Juice wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -24,35 +24,29 @@ public class Star extends Actor
         disappear();
         // Add your action code here.
     }
-   
+    
     //The star will rebound when it meets other objects
     public void turn(){
         if(Greenfoot.getRandomNumber(100) < 5){
             turn(Greenfoot.getRandomNumber(90) - 45);
         }
-        if(getX() == 0 || getX() == getWorld().getWidth() - 1){
-            setRotation(180 - getRotation());
+        if(isAtEdge()){
+            turn(Greenfoot.getRandomNumber(90));
+        } 
+        if(isTouching(Ground.class)){
+            turn(180);
         }
-        if(getY() == 0 || getY() == getWorld().getHeight() - 1){
-            setRotation(360 - getRotation());
+        if(isTouching(Enemy.class)){
+            turn(180);
         }
-        
-        /**
-         * Need to add function for meeting other objects.
-         */
-        
-        
     }
-    
+
     public void disappear(){
-        //When meet the jumper, the star will disappear
+        //When neet the jumper, the star will disappear
         Actor jumper = getOneIntersectingObject(Jumper.class);
         if(jumper != null){
             getWorld().removeObject(this);
-            /**
-             * Need to add a sound here.
-             */
-            Greenfoot.playSound("");
+            Greenfoot.playSound("nsmbwiiCoin.wav");
         }
         
     }

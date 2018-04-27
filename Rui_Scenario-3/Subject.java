@@ -6,8 +6,7 @@
  */
 public interface Subject  
 {
-    public void registerO(Observer observer);
-    public void removeO(Observer observer);
-    public void notifyO();
-    
+    public void registerObserver(Observer observer);
+    public void removeObserver(Observer observer);
+    public void notifyObserver();
 }
