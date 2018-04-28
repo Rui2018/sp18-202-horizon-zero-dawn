@@ -113,26 +113,26 @@ public class JumpWorld extends World
      */
     private void prepare()
     {
+
     }
     
     public void createText(){
         String text1 = "Let's start!";
-        showText(text1, 120, 30);
+        addObject(new Instructions(text1), 120, 30);
         
         String text2 = "The ground will move, be careful!";
-        showText(text2, 300, 120);
+        addObject(new Instructions(text2), 300, 120);
         
         String text3 = "Enemy!";
-        showText(text3, 450, 250);
+        addObject(new Instructions(text3), 450, 250);
         
         String text4 = "Shoot them! Do not let them touch you!";
-        showText(text4, 500, 300);
+        addObject(new Instructions(text4), 700, 320);
         
         String text5 = "Well done!";
-        showText(text5, 550, 350);
+        addObject(new Instructions(text5), 600, 350);
         
         String text6 = "Collect all stars to win!";
-        showText(text6, 620, 480);
-        
+        addObject(new Instructions(text6), 165, 50);
     }
 }
