@@ -21,7 +21,6 @@ public class JumpWorld extends World
         super(900, 500, 1); 
         addObject(this.jumper, 30, 30);
         addObject(this.score, 880, 15);
-
         createStars();
         createGround();
         createEnemy();
@@ -75,7 +74,7 @@ public class JumpWorld extends World
 
     public void createEnemy() {
         Enemy enemy = new Enemy();
-        addObject(new Enemy(), 500, 320);
+        addObject(enemy, 500, 320);
         //int x = corner? 0:900;
         //addObject(enemy, x, 500); 
         if(corner){
@@ -118,21 +117,33 @@ public class JumpWorld extends World
     
     public void createText(){
         String text1 = "Let's start!";
-        addObject(new Instructions(text1), 120, 30);
+        Instructions Text1 = new Instructions(text1, 120, 30);
+        addObject(Text1, 120, 30);
+        this.jumper.registerObserver(Text1);
         
         String text2 = "The ground will move, be careful!";
-        addObject(new Instructions(text2), 300, 120);
+        Instructions Text2 = new Instructions(text2, 300, 120);
+        addObject(Text2, 300, 120);
+        this.jumper.registerObserver(Text2);
         
         String text3 = "Enemy!";
-        addObject(new Instructions(text3), 450, 250);
+        Instructions Text3 = new Instructions(text3, 450, 250);
+        addObject(new Instructions(text3, 450, 250), 450, 250);
+        this.jumper.registerObserver(Text3);
         
         String text4 = "Shoot them! Do not let them touch you!";
-        addObject(new Instructions(text4), 700, 320);
+        Instructions Text4 = new Instructions(text4, 700, 320);
+        addObject(new Instructions(text4, 700, 320), 700, 320);
+        this.jumper.registerObserver(Text4);
         
         String text5 = "Well done!";
-        addObject(new Instructions(text5), 600, 350);
+        Instructions Text5 = new Instructions(text5, 600, 350);
+        addObject(new Instructions(text5, 600, 350), 600, 350);
+        this.jumper.registerObserver(Text5);
         
         String text6 = "Collect all stars to win!";
-        addObject(new Instructions(text6), 165, 50);
+        Instructions Text6 = new Instructions(text6, 165, 50);
+        addObject(new Instructions(text6, 165, 50), 165, 50);
+        this.jumper.registerObserver(Text6);
     }
 }
