@@ -9,7 +9,7 @@ public class Ground extends Actor
     {
         
         GreenfootImage image = getImage();
-        image.scale(image.getWidth() /10, image.getHeight() /16);
+        image.scale(image.getWidth() /8, image.getHeight() /16);
         setImage(image);
         this.speed = speed;
         
