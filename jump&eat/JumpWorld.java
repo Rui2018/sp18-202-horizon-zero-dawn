@@ -36,6 +36,10 @@ public class JumpWorld extends World
         }
         int count = getObjects(Star.class).size();
         score.setScore(totalStar - count);
+        if(count == 8){
+            Greenfoot.setWorld(new ForestWorld());
+            
+        }
         if(count == 0)
         {
             Win win = new Win();
@@ -43,6 +47,7 @@ public class JumpWorld extends World
             win_flag = 1;
             Greenfoot.stop();
         }
+        
     }
     
     public void createGround()
@@ -107,5 +112,6 @@ public class JumpWorld extends World
     public void setLose(){
         win_flag = -1;
     }
+    
     
 }
