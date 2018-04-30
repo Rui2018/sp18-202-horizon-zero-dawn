@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ForestWorld
-comment0.text=\n\ Write\ a\ description\ of\ class\ ForestWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ ForestWorld\ here.\n\ There\ is\ 1\ jumper,\ 5\ stars,\ lots\ of\ enemies.\n\ Move\ jumper\ to\ catch\ stars\ and\ shoot\ to\ destroy\ the\ enemies.\n\ The\ jumper\ can\ stay\ on\ the\ grounds.\n\ Win\:\ the\ jumper\ catches\ all\ the\ stars.\n\ GameOver\:\ the\ jumper\ drop\ out\ or\ meets\ (touches)\ enemies.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=ForestWorld()
 comment10.params=

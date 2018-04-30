@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=JumperForest
-comment0.text=\n\ Write\ a\ description\ of\ class\ JumperForest\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ JumperForest\ here.\n\ The\ jumper\ can\ be\ controled\ by\ keyboard.\ It\ can\ move\ left\ and\ right,\ can\ jump\ and\n\ shoot.\n\ If\ the\ jumper\ fall,\ it\ will\ die.\n\ If\ the\ jumoer\ meets(catch)\ the\ enemy,\ it\ will\ die.\ But\ it\ can\ shoot\ to\ kill\ enemy.\n\ When\ the\ jumer\ catch\ all\ the\ stars,\ WIN\!\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ JumperForest\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n

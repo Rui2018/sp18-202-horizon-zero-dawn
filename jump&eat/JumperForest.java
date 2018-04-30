@@ -3,6 +3,11 @@ import java.util.List;
 import java.util.ArrayList;
 /**
  * Write a description of class JumperForest here.
+ * The jumper can be controled by keyboard. It can move left and right, can jump and
+ * shoot.
+ * If the jumper fall, it will die.
+ * If the jumoer meets(catch) the enemy, it will die. But it can shoot to kill enemy.
+ * When the jumer catch all the stars, WIN!
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -32,7 +37,7 @@ public class JumperForest extends Mover implements Subject
         //ifWin();
         
         // Add your action code here.
-    } 
+    }
     public void ifFall(){
         if(onGround()){
             vSpeed = 0;
@@ -41,6 +46,7 @@ public class JumperForest extends Mover implements Subject
             fall();
         }
     }
+
     private void checkKeys()
     {
         if(Greenfoot.isKeyDown("left")){
@@ -91,6 +97,17 @@ public class JumperForest extends Mover implements Subject
             Greenfoot.stop();
         }
     }
+    
+    //public void ifWin(){
+        //Actor star = getOneIntersectingObject(Star.class);
+        //if(getObjects(Star.class).size() == 0){
+            //Win win = new Win();
+            //getWorld().addObject(win, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+            //((JumpWorld)getWorld()).Victory();
+            //Greenfoot.stop();
+        //}
+    //}
+    
     public boolean onGround(){
         int JumperHeight = getImage().getHeight();
         //int Y = (int) (JumperHeight/2 + 5);

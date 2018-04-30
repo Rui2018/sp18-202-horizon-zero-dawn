@@ -2,6 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class ForestWorld here.
+ * There is 1 jumper, 5 stars, lots of enemies.
+ * Move jumper to catch stars and shoot to destroy the enemies.
+ * The jumper can stay on the grounds.
+ * Win: the jumper catches all the stars.
+ * GameOver: the jumper drop out or meets (touches) enemies.
  * 
  * @author (your name) 
  * @version (a version number or a date)

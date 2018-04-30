@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class GroundForest here.
+ * The grounds move left and right.
  * 
  * @author (your name) 
  * @version (a version number or a date)
