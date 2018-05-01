@@ -80,7 +80,7 @@ public class Jumper extends Mover implements Subject
             GameOver gameOver = new GameOver();
             
             getWorld().addObject(gameOver, getWorld().getWidth()/2, getWorld().getHeight()/2);
-            ((JumpWorld)getWorld()).setLose();
+            ((InstructionWorld)getWorld()).setLose();
             Greenfoot.stop();
         }
     }

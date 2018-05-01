@@ -1,12 +1,12 @@
 import greenfoot.*;  
 
 /**
- * Write a description of class JumpWorld here.
+ * Write a description of class InstructionWorld here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class JumpWorld extends World 
+public class InstructionWorld extends World 
 {
     private SimpleTimer timer = new SimpleTimer();
     private Jumper jumper = new Jumper();
@@ -16,18 +16,11 @@ public class JumpWorld extends World
     GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
     private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
     
-    public JumpWorld()
+    public InstructionWorld()
     {    
         super(900, 500, 1); 
         prepare();
        
-    }
-
-    private void PlayerInput (){
-        if (Greenfoot.isKeyDown("enter")== true)
-        {
-            Greenfoot.setWorld(new JumpWorld());
-        }
     }
     
     public void act() {
@@ -43,9 +36,6 @@ public class JumpWorld extends World
             addObject(win, getWidth()/2, getHeight()/2);
             win_flag = 1;
             Greenfoot.stop();
-        }else
-        {
-            PlayerInput();
         }
     }
 
@@ -72,8 +62,9 @@ public class JumpWorld extends World
             Greenfoot.playSound("youwin.mp3");
         }
         else if(win_flag == -1){
-           Greenfoot.setWorld(new JumpWorld());
+           Greenfoot.setWorld(new InstructionWorld());
            Greenfoot.start();
+           sound.playLoop();
         }
         
     }
@@ -101,6 +92,7 @@ public class JumpWorld extends World
         createText();
         score.setScore(0);
         this.timer.mark();
+        
     }
     
     public void createText(){
