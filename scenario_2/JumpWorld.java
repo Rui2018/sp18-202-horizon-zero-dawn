@@ -52,13 +52,13 @@ public class JumpWorld extends World
     public void createGround()
     {
         addObject(new Ground(0), 20, 80);
-        addObject(new Ground(2), 170, 140);
+        addObject(new Ground(0), 170, 140);
         addObject(new Ground(0), 310, 220);
         addObject(new Ground(0), 460, 300);
-        addObject(new Ground(0), 610, 380);
+        addObject(new Ground(2), 610, 380);
         addObject(new Ground(0), 770, 450);
         addObject(new Ground(5), 100, 450);
-        addObject(new Ground(10), 450, 450);
+        addObject(new Ground(5), 450, 450);
         
     }
     public void createStars()
@@ -122,8 +122,8 @@ public class JumpWorld extends World
         this.jumper.registerObserver(Text1);
        
         String text2 = "The ground will move, be careful!";
-        Instructions Text2 = new Instructions(text2, 350, 120);
-        addObject(Text2, 350, 120);
+        Instructions Text2 = new Instructions(text2, 610, 380);
+        addObject(Text2, 610, 380);
         this.jumper.registerObserver(Text2);
        
         
