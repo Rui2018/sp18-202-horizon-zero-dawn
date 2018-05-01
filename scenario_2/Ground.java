@@ -4,6 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ground extends Actor
 {
     private int speed;
+    // private int size;
     
     public Ground(int speed)
     {
@@ -20,7 +21,7 @@ public class Ground extends Actor
     {
         moveLeftRight();
         
-        Actor jumper = getOneObjectAtOffset(0,-31,Jumper.class);
+        Actor jumper = getOneObjectAtOffset(0,-25,Jumper.class);
         if (jumper != null) {
             jumper.setLocation(jumper.getX() + speed, jumper.getY() );
         }

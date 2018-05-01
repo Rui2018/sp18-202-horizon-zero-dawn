@@ -2,8 +2,8 @@
 comment0.target=Star
 comment1.params=
 comment1.target=void\ act()
-comment2.params=
-comment2.target=void\ moveAround()
+comment2.params=n
+comment2.target=void\ moveAround(int)
 comment3.params=
 comment3.target=void\ disappear()
 numComments=4

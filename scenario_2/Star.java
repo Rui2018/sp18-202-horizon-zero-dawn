@@ -6,14 +6,14 @@ public class Star extends Actor
     
     public void act() 
     {
-        moveAround();
+        moveAround(0);
         disappear();
         
     }
     
-    public void moveAround()
+    public void moveAround(int n)
     {
-        move(2);
+        move(n);
         if(Greenfoot.getRandomNumber(100) < 10)
         {
             turn(Greenfoot.getRandomNumber(90) - 45);

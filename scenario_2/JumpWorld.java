@@ -11,28 +11,25 @@ public class JumpWorld extends World
     private SimpleTimer timer = new SimpleTimer();
     private Jumper jumper = new Jumper();
     private Score score = new Score();
-    private int totalStar = 5;
+    private int totalStar = 4;
     private boolean corner = false;
     GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
     private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
-
-    
     
     public JumpWorld()
     {    
         super(900, 500, 1); 
-        addObject(this.jumper, 30, 30);
-        addObject(this.score, 880, 15);
-        createStars();
-        createGround();
-        createEnemy();
-        createText();
-        score.setScore(0);
-        this.timer.mark();
         prepare();
        
     }
 
+    private void PlayerInput (){
+        if (Greenfoot.isKeyDown("enter")== true)
+        {
+            Greenfoot.setWorld(new JumpWorld());
+        }
+    }
+    
     public void act() {
         //if(timer.millisElapsed() > 2000 ) {
            // createEnemy();
@@ -46,57 +43,39 @@ public class JumpWorld extends World
             addObject(win, getWidth()/2, getHeight()/2);
             win_flag = 1;
             Greenfoot.stop();
+        }else
+        {
+            PlayerInput();
         }
     }
 
     public void createGround()
     {
         addObject(new Ground(0), 20, 80);
-        addObject(new Ground(2), 170, 140);
-        addObject(new Ground(0), 310, 220);
-        addObject(new Ground(0), 460, 300);
-        addObject(new Ground(0), 610, 380);
-        addObject(new Ground(0), 770, 450);
-        addObject(new Ground(5), 100, 450);
-        addObject(new Ground(10), 450, 450);
-      
-
-        
+        addObject(new Ground(0), 200, 300);
+        addObject(new Ground(0), 380, 220);
+        addObject(new Ground(0), 560, 290);
+        addObject(new Ground(0), 740, 360);
+    
     }
     public void createStars()
-    {
-
-        for(int i = 0; i < totalStar; i++)
-        {
-            //int randX = Greenfoot.getRandomNumber(500) + 10;
-            //int randY = Greenfoot.getRandomNumber(200) + 10;
-            //addObject(new Star(), randX, randY);
-            addObject(new Star(),(50 +100*i), (80+50*i));
-        }
+    {        
+        addObject(new Star(), 200, 265);
+        addObject(new Star(), 380, 185);
+        addObject(new Star(), 560, 255);
+        addObject(new Star(), 740, 325);
     }
 
-    public void createEnemy() {
-        Enemy enemy = new Enemy();
-        addObject(enemy, 500, 320);
-    
-        if(corner){
-            corner = false;
-        }
-        else{
-            corner = true;
-        }
-        this.jumper.registerObserver(enemy);
-    }
-
-    public void stopped() {
-
+   public void stopped() {
         sound.stop();
         if(win_flag == 1) {
             Greenfoot.playSound("youwin.mp3");
         }
         else if(win_flag == -1){
-            Greenfoot.playSound("gameover.wav");
+           Greenfoot.setWorld(new JumpWorld());
+           Greenfoot.start();
         }
+        
     }
 
     public void started(){
@@ -114,44 +93,32 @@ public class JumpWorld extends World
      */
     private void prepare()
     {
-
+        addObject(this.jumper, 30, 30);
+        addObject(this.score, 880, 15);
+        createStars();
+        createGround();
+        // createEnemy();
+        createText();
+        score.setScore(0);
+        this.timer.mark();
     }
     
     public void createText(){
-        String text1 = "Let's start!";
-        Instructions Text1 = new Instructions(text1, 300, 50);
-        addObject(Text1, 300, 50);
+        String text1 = "Use left/right arrow key to move around";
+        Instructions Text1 = new Instructions(text1, 200, 50);
+        addObject(Text1, 200, 50);
         this.jumper.registerObserver(Text1);
        
-        String text2 = "The ground will move, be careful!";
-        Instructions Text2 = new Instructions(text2, 350, 120);
-        addObject(Text2, 350, 120);
+        String text2 = "Press space bar to jump";
+        Instructions Text2 = new Instructions(text2, 300, 300);
+        addObject(Text2, 300, 300);
         this.jumper.registerObserver(Text2);
-       
         
-        String text3 = "Enemy!";
-        Instructions Text3 = new Instructions(text3, 677, 250); 
-        addObject(Text3, 677, 250);
+        
+        String text3 = "Keep going!";
+        Instructions Text3 = new Instructions(text3, 677, 280);
+        addObject(Text3, 677, 280);
         this.jumper.registerObserver(Text3);
-        
-        
-        String text4 = "Shoot them! Do not let them touch you!";
-        Instructions Text4 = new Instructions(text4, 677, 280);
-        addObject(Text4, 677, 280);
-        this.jumper.registerObserver(Text4);
-       
-        
-        
-        String text5 = "Well done!";
-        Instructions Text5 = new Instructions(text5, 750, 350);
-        addObject(Text5, 750, 350);
-        this.jumper.registerObserver(Text5);
-        
-        
-        String text6 = "Collect all stars to win!";
-        Instructions Text6 = new Instructions(text6, 300, 80);
-        addObject(Text6, 300, 80);
-        this.jumper.registerObserver(Text6);
         
     }
     
