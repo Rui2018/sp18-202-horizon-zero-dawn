@@ -38,7 +38,7 @@ public class Juice extends Actor implements Stars
     
     public void disappear()
     {
-        Actor jumper = getOneIntersectingObject(Jumper.class);
+        Actor jumper = getOneIntersectingObject(JumperDesert.class);
         if(jumper != null)
         {
             getWorld().removeObject(this);

@@ -29,7 +29,7 @@ public class GroundDesert extends Actor
     {
         moveLeftRight();
         
-        Actor jumper = getOneObjectAtOffset(0,-31,Jumper.class);
+        Actor jumper = getOneObjectAtOffset(0,-31,JumperDesert.class);
         if (jumper != null) {
             jumper.setLocation(jumper.getX() + speed, jumper.getY() );
         }

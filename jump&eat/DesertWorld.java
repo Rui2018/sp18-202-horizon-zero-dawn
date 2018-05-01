@@ -11,7 +11,7 @@ public class DesertWorld extends World
 
     private int groundSpeed=0;
     private SimpleTimer timer = new SimpleTimer();
-    private Jumper jumper = new Jumper();
+    private JumperDesert jumper = new JumperDesert();
     private Score score = new Score();
     private int totalJuice = 10;
     private boolean corner = false;
@@ -34,6 +34,7 @@ public class DesertWorld extends World
         createEnemy();
         score.setScore(0);
         this.timer.mark();
+        Greenfoot.start();
         
     }
     
@@ -44,7 +45,7 @@ public class DesertWorld extends World
         }
         int count = getObjects(Juice.class).size();
         score.setScore(totalJuice - count);
-        if(count == 0)
+        if(count == 9)
         {
             Win win = new Win();
             addObject(win, getWidth()/2, getHeight()/2);
