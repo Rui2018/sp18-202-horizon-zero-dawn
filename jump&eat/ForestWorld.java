@@ -70,11 +70,11 @@ public class ForestWorld extends World
        if(count == 3)
         {
             
-            //Win win = new Win();
-            //addObject(win, getWidth()/2, getHeight()/2);
-            //win_flag = 1;
+            Win win = new Win();
+            addObject(win, getWidth()/2, getHeight()/2);
+            winFlag = 1;
             Greenfoot.stop();
-            Greenfoot.setWorld(new DesertWorld());
+           
         }
         
         
