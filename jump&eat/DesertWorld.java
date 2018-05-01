@@ -34,7 +34,7 @@ public class DesertWorld extends World
         createEnemy();
         score.setScore(0);
         this.timer.mark();
-        
+        Greenfoot.start();
     }
     
     public void act() {
