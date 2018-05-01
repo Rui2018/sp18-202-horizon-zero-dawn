@@ -67,7 +67,7 @@ public class ForestWorld extends World
             
         }
         */
-       if(count == 0)
+       if(count == 3)
         {
             
             //Win win = new Win();
