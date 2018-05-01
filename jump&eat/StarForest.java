@@ -44,7 +44,7 @@ public class StarForest extends Actor implements Stars
 
     public void disappear(){
         //When neet the jumper, the star will disappear
-        Actor jumper = getOneIntersectingObject(Jumper.class);
+        Actor jumper = getOneIntersectingObject(JumperForest.class);
         if(jumper != null){
             getWorld().removeObject(this);
             Greenfoot.playSound("nsmbwiiCoin.wav");
