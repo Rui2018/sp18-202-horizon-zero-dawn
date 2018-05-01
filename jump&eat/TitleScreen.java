@@ -30,6 +30,7 @@ public class TitleScreen extends World implements Proxy
         String input = JOptionPane.showInputDialog("Please enter password");
         passcode(input);
         if (flag) Greenfoot.setWorld(new Instruction());
+        else Greenfoot.setWorld(new TitleScreen());
         //if (Greenfoot.isKeyDown("space")) Greenfoot.setWorld(new JumpWorld());
     }
 
@@ -43,7 +44,6 @@ public class TitleScreen extends World implements Proxy
     
     public void passcode(String input)
     {
-        if (input.equals("1234")) flag = true; 
-        else Greenfoot.setWorld(new TitleScreen());
+        if (input.equals("1234")) flag = true;  
     }
 }
