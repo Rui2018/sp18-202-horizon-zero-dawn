@@ -1,4 +1,7 @@
 #Greenfoot project file
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=9cab967084135181b700f5b32e02bc012a0988ee
 class.Bullet.image=black-circle-icon-23.png
 class.Bullet.superclass=Mover
 class.Enemy.image=6489590bcb5a2038d5b81895e2415f40.png
@@ -9,7 +12,11 @@ class.Ground.image=ground.jpg
 class.Ground.superclass=greenfoot.Actor
 class.Inputbox.superclass=greenfoot.Actor
 class.Instructions.superclass=greenfoot.Actor
+<<<<<<< HEAD
 class.JumpWorld.image=s2.jpg
+=======
+class.JumpWorld.image=bg.png
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 class.JumpWorld.superclass=greenfoot.World
 class.Jumper.image=jumper_right.png
 class.Jumper.superclass=Mover
@@ -70,8 +77,13 @@ dependency20.type=UsesDependency
 dependency21.from=Enemy
 dependency21.to=Bullet
 dependency21.type=UsesDependency
+<<<<<<< HEAD
 dependency3.from=TitleScreen
 dependency3.to=JumpWorld
+=======
+dependency3.from=Jumper
+dependency3.to=Ground
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 dependency3.type=UsesDependency
 dependency4.from=TitleScreen
 dependency4.to=Textbox
@@ -98,8 +110,13 @@ editor.fx.0.y=24
 mainWindow.height=876
 mainWindow.width=1375
 mainWindow.x=65
+<<<<<<< HEAD
 mainWindow.y=24
 package.numDependencies=21
+=======
+mainWindow.y=23
+package.numDependencies=0
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 package.numTargets=17
 project.charset=UTF-8
 readme.height=58
@@ -107,7 +124,11 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
 simulation.speed=36
+=======
+simulation.speed=47
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target1.height=50
 target1.name=Bullet
 target1.showInterface=false
@@ -133,17 +154,25 @@ target11.width=90
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=Proxy
+=======
+target12.name=Score
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target12.showInterface=false
-target12.type=InterfaceTarget
+target12.type=ClassTarget
 target12.typeParameters=
 target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 target13.name=Score
+=======
+target13.name=Proxy
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target13.showInterface=false
-target13.type=ClassTarget
+target13.type=InterfaceTarget
 target13.typeParameters=
 target13.width=80
 target13.x=0
@@ -157,17 +186,29 @@ target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
+<<<<<<< HEAD
 target15.name=Observer
 target15.showInterface=false
 target15.type=InterfaceTarget
+=======
+target15.name=Enemy
+target15.showInterface=false
+target15.type=ClassTarget
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target15.typeParameters=
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
+<<<<<<< HEAD
 target16.name=Enemy
 target16.showInterface=false
 target16.type=ClassTarget
+=======
+target16.name=Observer
+target16.showInterface=false
+target16.type=InterfaceTarget
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target16.typeParameters=
 target16.width=80
 target16.x=0
@@ -245,4 +286,8 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 world.lastInstantiated=TitleScreen
+=======
+world.lastInstantiated=JumpWorld
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a

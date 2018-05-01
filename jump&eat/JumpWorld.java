@@ -46,7 +46,7 @@ public class JumpWorld extends World
             //addObject(win, getWidth()/2, getHeight()/2);
             //win_flag = 1;
             Greenfoot.stop();
-            Greenfoot.setWorld(new ForestWorld());
+            Greenfoot.setWorld(new DesertWorld());
         }
 
     }
