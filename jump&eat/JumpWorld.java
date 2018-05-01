@@ -36,16 +36,15 @@ public class JumpWorld extends World
         }
         int count = getObjects(Star.class).size();
         score.setScore(totalStar - count);
-        if(count == 8){
-            Greenfoot.setWorld(new ForestWorld());
-            
-        }
+      
         if(count == 0)
         {
-            Win win = new Win();
-            addObject(win, getWidth()/2, getHeight()/2);
-            win_flag = 1;
+            
+            //Win win = new Win();
+            //addObject(win, getWidth()/2, getHeight()/2);
+            //win_flag = 1;
             Greenfoot.stop();
+            Greenfoot.setWorld(new ForestWorld());
         }
         
     }
