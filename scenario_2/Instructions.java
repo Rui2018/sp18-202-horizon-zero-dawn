@@ -23,10 +23,6 @@ public class Instructions extends Actor implements Observer
     public Instructions(String instruction, int x, int y)
     {
         
-        //newImage = new GreenfootImage(instruction, 18, 
-                                                     //Color.BLACK, 
-                                                     //new Color(0, 0, 0, 0));
-        //setImage(newImage);
         img = new GreenfootImage(400, 60);
         img.setColor(new Color(0, 0, 0, 0));
         img.fill();
@@ -50,7 +46,6 @@ public class Instructions extends Actor implements Observer
     {
         if (targetX > (textX-220))
         {
-            //getWorld().addObject(this, textX, textY);
             this.setImage(img2);
         }
         

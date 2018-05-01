@@ -17,12 +17,12 @@ public class JumpWorld extends World
     private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
 
     
-    
     public JumpWorld()
     {    
         super(900, 500, 1); 
         addObject(this.jumper, 30, 30);
         addObject(this.score, 880, 15);
+      
         createStars();
         createGround();
         createEnemy();
@@ -59,8 +59,6 @@ public class JumpWorld extends World
         addObject(new Ground(0), 770, 450);
         addObject(new Ground(5), 100, 450);
         addObject(new Ground(10), 450, 450);
-      
-
         
     }
     public void createStars()
@@ -135,7 +133,7 @@ public class JumpWorld extends World
         this.jumper.registerObserver(Text3);
         
         
-        String text4 = "Shoot them! Do not let them touch you!";
+        String text4 = "Press 's' to shoot them! Do not let them touch you!";
         Instructions Text4 = new Instructions(text4, 677, 280);
         addObject(Text4, 677, 280);
         this.jumper.registerObserver(Text4);
