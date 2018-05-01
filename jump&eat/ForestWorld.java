@@ -33,6 +33,7 @@ public class ForestWorld extends World
     public ForestWorld()
     {    
        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
         super(900, 500, 1);
         addObject(jumper, 30, 30);
         addObject(score, 830, 15);
@@ -42,6 +43,7 @@ public class ForestWorld extends World
         createStones();
         score.setScore(0);
         timer.mark();
+        Greenfoot.start();
         
     }
     public void act(){
@@ -53,16 +55,18 @@ public class ForestWorld extends World
         
         int count = getObjects(StarForest.class).size();
         score.setScore(count);
-        //if(count == 0){
-           // Win smell = new Win();
-           // addObject(smell, getWidth()/2, getHeight()/2);
-           // winFlag = 1;
-           // Greenfoot.stop();
-        //}
+       if(count == 0){
+           Win smell = new Win();
+           addObject(smell, getWidth()/2, getHeight()/2);
+           winFlag = 1;
+           Greenfoot.stop();
+        }
+        /*
         if(count == 0){
             Greenfoot.setWorld(new ForestWorld());
             
         }
+        */
         
         
     }
