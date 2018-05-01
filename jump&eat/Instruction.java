@@ -133,7 +133,7 @@ public class Instruction extends World
         this.jumper.registerObserver(Text3);
         
         
-        String text4 = "Press 's' to shoot them! Do not let them touch you!";
+        String text4 = "Press 's' to shoot them! \nDo not let them touch you!";
         Instructions Text4 = new Instructions(text4, 677, 280);
         addObject(Text4, 677, 280);
         this.jumper.registerObserver(Text4);
