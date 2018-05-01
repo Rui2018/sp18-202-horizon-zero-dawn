@@ -144,7 +144,7 @@ public class ForestWorld extends World
     }
     
     public void stopped(){
-        bgmBackGround.pause();
+        bgmBackGround.stop();
         if(winFlag == 1) {
             Greenfoot.playSound("youwin.mp3");
         }
