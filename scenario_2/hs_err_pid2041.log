@@ -1,0 +1,188 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f3d4a1e7f4d, pid=2041, tid=0x00007f3d28ddd700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_162-b12) (build 1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12)
+# Java VM: OpenJDK 64-Bit Server VM (25.162-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x39f4d]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f3d44244800):  JavaThread "AWT-XAWT" daemon [_thread_in_native, id=2188, stack(0x00007f3d28cdd000,0x00007f3d28dde000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 128 (SI_KERNEL), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007f3d2c0683ef, RBX=0x0000000000000001, RCX=0x001066e2acd7b3f0, RDX=0x000fe7a580d07e00
+RSP=0x00007f3d28ddc2a0, RBP=0x00007f3d4a5725f8, RSI=0x0000000000000001, RDI=0x00007f3cece9ed70
+R8 =0x00007f3d2c073d20, R9 =0x0000000000000000, R10=0x00000000000003f8, R11=0x00007f3d4a2c2fc0
+R12=0x0000000000000001, R13=0x00007f3d2c073600, R14=0x00007f3d28ddc340, R15=0x00007f3d441ca8e0
+RIP=0x00007f3d4a1e7f4d, EFLAGS=0x0000000000010212, CSGSFS=0x002b000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007f3d28ddc2a0)
+0x00007f3d28ddc2a0:   0000000000000001 000000000000000b
+0x00007f3d28ddc2b0:   00007f3d4a33e9a8 0000000000632aa0
+0x00007f3d28ddc2c0:   00007f3d441e0ea0 00007f3d4a1e8045
+0x00007f3d28ddc2d0:   0000000000000066 00007f3ce7160ee1
+0x00007f3d28ddc2e0:   00007f3d441e2190 00007f3d441e2190
+0x00007f3d28ddc2f0:   0000000000632aa0 0000000000632aa0
+0x00007f3d28ddc300:   0000000000000000 00007f3d2a6b7cee
+0x00007f3d28ddc310:   00007f3d441e2190 00007f3d2a6b5d4a
+0x00007f3d28ddc320:   00007f3cde1a59b0 00007f3d28ddc390
+0x00007f3d28ddc330:   0000000000000000 0000000100000000
+0x00007f3d28ddc340:   0000000000000000 6d2d1f25a44ee600
+0x00007f3d28ddc350:   00000000000000b7 00007f3d441e2190
+0x00007f3d28ddc360:   00007f3d28ddc3ec 00007f3d28ddc3f0
+0x00007f3d28ddc370:   00007f3d28ddc518 00007f3d28ddc440
+0x00007f3d28ddc380:   00007f3d44244800 00007f3d2a69ae43
+0x00007f3d28ddc390:   0000000000000000 00000000c2cd52a8
+0x00007f3d28ddc3a0:   00000000c2a6b680 00000000c2a6cea8
+0x00007f3d28ddc3b0:   00000000c2a6b7a0 6d2d1f25a44ee600
+0x00007f3d28ddc3c0:   00007f3cde2030a8 00007f3d28ddc400
+0x00007f3d28ddc3d0:   0000000000000000 00007f3d2abf1b67
+0x00007f3d28ddc3e0:   00007f3cde1c2cf8 00000000000000b7
+0x00007f3d28ddc3f0:   00007f3cde1a59b0 6d2d1f25a44ee600
+0x00007f3d28ddc400:   00007f3d28ddc450 00007f3d3413d0b1
+0x00007f3d28ddc410:   00000000c2be76b0 00007f3d341b04d0
+0x00007f3d28ddc420:   00000000c2a6cb10 00007f3dec0fdff0
+0x00007f3d28ddc430:   00007f3d28ddc558 00007f3d34524b9c
+0x00007f3d28ddc440:   00000000c2cd6aa0 00007f3d28ddc4f0
+0x00007f3d28ddc450:   00007f3d28ddc558 00007f3d34b761b4
+0x00007f3d28ddc460:   00007f3d28ddc5a0 00000000c2a6b680
+0x00007f3d28ddc470:   0000000000000001 00007f3d440266c0
+0x00007f3d28ddc480:   0000000000000300 00007f3d28ddc4d0
+0x00007f3d28ddc490:   00007f3d28ddc500 00007f3d33a65ae0 
+
+Instructions: (pc=0x00007f3d4a1e7f4d)
+0x00007f3d4a1e7f2d:   ed 74 50 49 8b 45 08 48 89 c2 48 c1 e2 05 48 85
+0x00007f3d4a1e7f3d:   c0 49 8d 4c 15 f0 74 2a 48 83 e8 01 49 89 45 08
+0x00007f3d4a1e7f4d:   48 8b 11 48 83 fa 03 0f 84 a6 00 00 00 48 83 fa
+0x00007f3d4a1e7f5d:   04 74 78 48 83 fa 02 74 4a 48 83 e9 20 48 85 c0 
+
+Register to memory mapping:
+
+RAX=0x00007f3d2c0683ef is an unknown value
+RBX=0x0000000000000001 is an unknown value
+RCX=0x001066e2acd7b3f0 is an unknown value
+RDX=0x000fe7a580d07e00 is an unknown value
+RSP=0x00007f3d28ddc2a0 is pointing into the stack for thread: 0x00007f3d44244800
+RBP=0x00007f3d4a5725f8: <offset 0x3c45f8> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f3d4a1ae000
+RSI=0x0000000000000001 is an unknown value
+RDI=0x00007f3cece9ed70: <offset 0x35afd70> in /usr/lib/x86_64-linux-gnu/libLLVM-5.0.so.1 at 0x00007f3ce98ef000
+R8 =0x00007f3d2c073d20 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x00000000000003f8 is an unknown value
+R11=0x00007f3d4a2c2fc0: pthread_mutex_unlock+0 in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f3d4a1ae000
+R12=0x0000000000000001 is an unknown value
+R13=0x00007f3d2c073600 is an unknown value
+R14=0x00007f3d28ddc340 is pointing into the stack for thread: 0x00007f3d44244800
+R15=0x00007f3d441ca8e0 is an unknown value
+
+
+Stack: [0x00007f3d28cdd000,0x00007f3d28dde000],  sp=0x00007f3d28ddc2a0,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x39f4d]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 6185  sun.awt.X11.XlibWrapper.XGetInputFocus(J)J (0 bytes) @ 0x00007f3d3413d041 [0x00007f3d3413d000+0x41]
+J 5500 C1 sun.awt.X11.XWindowPeer.getNativeFocusedWindowPeer()Lsun/awt/X11/XWindowPeer; (40 bytes) @ 0x00007f3d34b761b4 [0x00007f3d34b75f00+0x2b4]
+j  sun.awt.X11.XWindowPeer.handleFocusEvent(Lsun/awt/X11/XEvent;)V+107
+j  sun.awt.X11.XDecoratedPeer.handleFocusEvent(Lsun/awt/X11/XEvent;)V+2
+J 5515 C1 sun.awt.X11.XFocusProxyWindow.dispatchEvent(Lsun/awt/X11/XEvent;)V (43 bytes) @ 0x00007f3d34b7e7f4 [0x00007f3d34b7e4a0+0x354]
+J 5464 C2 sun.awt.X11.XToolkit.dispatchEvent(Lsun/awt/X11/XEvent;)V (181 bytes) @ 0x00007f3d34b08600 [0x00007f3d34b07680+0xf80]
+J 6710% C1 sun.awt.X11.XToolkit.run(Z)V (410 bytes) @ 0x00007f3d34f0518c [0x00007f3d34f00c80+0x450c]
+j  sun.awt.X11.XToolkit.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f3d1000a000 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=5253, stack(0x00007f3cda25a000,0x00007f3cda35b000)]
+  0x00007f3d24372000 JavaThread "XToolkt-Shutdown-Thread" [_thread_blocked, id=5247, stack(0x00007f3cda55d000,0x00007f3cda65e000)]
+  0x00007f3d10009800 JavaThread "SIGHUP handler" daemon [_thread_blocked, id=5219, stack(0x00007f3cda860000,0x00007f3cda961000)]
+  0x00007f3d1000b000 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=5186, stack(0x00007f3cdb2d5000,0x00007f3cdb3d6000)]
+  0x00007f3d005de800 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=5164, stack(0x00007f3cda75f000,0x00007f3cda860000)]
+  0x00007f3d10001800 JavaThread "RMI TCP Connection(idle)" daemon [_thread_blocked, id=5126, stack(0x00007f3cdbd9e000,0x00007f3cdbe9f000)]
+  0x00007f3d007db800 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=5072, stack(0x00007f3cdb3d6000,0x00007f3cdb4d7000)]
+  0x00007f3d0007e800 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=5056, stack(0x00007f3cda961000,0x00007f3cdaa62000)]
+  0x00007f3d0007f800 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=5003, stack(0x00007f3cdb1d4000,0x00007f3cdb2d5000)]
+  0x00007f3d00334800 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=4454, stack(0x00007f3cf49ea000,0x00007f3cf4aeb000)]
+  0x00007f3d00a8d000 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=4333, stack(0x00007f3cdac1a000,0x00007f3cdad1b000)]
+  0x00007f3d009c3000 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=3998, stack(0x00007f3cdaf1b000,0x00007f3cdb01c000)]
+  0x00007f3d00138800 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=3250, stack(0x00007f3cdb01c000,0x00007f3cdb11d000)]
+  0x00007f3d00020800 JavaThread "SoundStream:file:/home/polarisbamboo/scenario_2/sounds/nyan_cat.mp3" [_thread_blocked, id=2449, stack(0x00007f3cdb7d8000,0x00007f3cdb8d9000)]
+  0x00007f3d0031b000 JavaThread "Thread-10" daemon [_thread_blocked, id=2415, stack(0x00007f3cdb6d7000,0x00007f3cdb7d8000)]
+  0x00007f3d1c00e000 JavaThread "PulseAudio Eventloop Thread" daemon [_thread_blocked, id=2410, stack(0x00007f3cdedf4000,0x00007f3cdeef5000)]
+  0x00007f3d242cb800 JavaThread "TimerQueue" daemon [_thread_blocked, id=2331, stack(0x00007f3cdc0a9000,0x00007f3cdc1aa000)]
+  0x00007f3d24084800 JavaThread "Thread-7" daemon [_thread_blocked, id=2317, stack(0x00007f3cde9f2000,0x00007f3cdeaf3000)]
+  0x00007f3d1401d800 JavaThread "main" [_thread_blocked, id=2308, stack(0x00007f3d282e0000,0x00007f3d283e1000)]
+  0x00007f3d24210800 JavaThread "SimulationThread" [_thread_blocked, id=2286, stack(0x00007f3cdeaf3000,0x00007f3cdebf4000)]
+  0x00007f3d241bd800 JavaThread "JavaFX Application Thread" [_thread_in_native, id=2269, stack(0x00007f3cdeef5000,0x00007f3cdeff6000)]
+  0x00007f3d241b9800 JavaThread "Thread-5" daemon [_thread_blocked, id=2265, stack(0x00007f3cdfff8000,0x00007f3ce00f9000)]
+  0x00007f3d0811d000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=2248, stack(0x00007f3cf47e8000,0x00007f3cf48e9000)]
+  0x00007f3d0811b800 JavaThread "AWT-Shutdown" [_thread_blocked, id=2246, stack(0x00007f3cf48e9000,0x00007f3cf49ea000)]
+  0x00007f3d080e7000 JavaThread "RMI Reaper" [_thread_blocked, id=2231, stack(0x00007f3cf4aeb000,0x00007f3cf4bec000)]
+  0x00007f3d080e2000 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=2230, stack(0x00007f3d289da000,0x00007f3d28adb000)]
+  0x00007f3cf8045800 JavaThread "GC Daemon" daemon [_thread_blocked, id=2220, stack(0x00007f3d284e2000,0x00007f3d285e3000)]
+  0x00007f3cf8058800 JavaThread "RMI RenewClean-[127.0.0.1:45743]" daemon [_thread_blocked, id=2217, stack(0x00007f3d285e3000,0x00007f3d286e4000)]
+  0x00007f3cf8057800 JavaThread "RMI Scheduler(0)" daemon [_thread_blocked, id=2216, stack(0x00007f3d28bdc000,0x00007f3d28cdd000)]
+  0x00007f3d4400d800 JavaThread "DestroyJavaVM" [_thread_blocked, id=2043, stack(0x00007f3d4a88d000,0x00007f3d4a98e000)]
+  0x00007f3d44249800 JavaThread "BlueJ worker thread" [_thread_blocked, id=2192, stack(0x00007f3d28adb000,0x00007f3d28bdc000)]
+=>0x00007f3d44244800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=2188, stack(0x00007f3d28cdd000,0x00007f3d28dde000)]
+  0x00007f3d44224800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=2180, stack(0x00007f3d291ee000,0x00007f3d292ef000)]
+  0x00007f3d440c4800 JavaThread "Service Thread" daemon [_thread_blocked, id=2075, stack(0x00007f3d2b1ef000,0x00007f3d2b2f0000)]
+  0x00007f3d440c1000 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=2063, stack(0x00007f3d2b2f0000,0x00007f3d2b3f1000)]
+  0x00007f3d440be800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=2062, stack(0x00007f3d2b3f1000,0x00007f3d2b4f2000)]
+  0x00007f3d14001000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=2055, stack(0x00007f3d2b4f2000,0x00007f3d2b5f3000)]
+  0x00007f3d440bc000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=2054, stack(0x00007f3d2b5f3000,0x00007f3d2b6f4000)]
+  0x00007f3d440b8800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=2053, stack(0x00007f3d2b6f4000,0x00007f3d2b7f5000)]
+  0x00007f3d440a9800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2049, stack(0x00007f3d2b9fa000,0x00007f3d2bafb000)]
+  0x00007f3d44083000 JavaThread "Finalizer" daemon [_thread_blocked, id=2048, stack(0x00007f3d2bafb000,0x00007f3d2bbfc000)]
+  0x00007f3d4407e800 JavaThread "Reference Handler" daemon [_thread_blocked, id=2047, stack(0x00007f3d2bbfc000,0x00007f3d2bcfd000)]
+
+Other Threads:
+  0x00007f3d44077000 VMThread [stack: 0x00007f3d2bcfd000,0x00007f3d2bdfe000] [id=2046]
+  0x00007f3d440c7000 WatcherThread [stack: 0x00007f3d2b0ee000,0x00007f3d2b1ef000] [id=2077]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 232448K, used 15944K [0x00000000eb900000, 0x00000000fa200000, 0x0000000100000000)
+  eden space 226304K, 7% used [0x00000000eb900000,0x00000000ec892030,0x00000000f9600000)
+  from space 6144K, 0% used [0x00000000f9600000,0x00000000f9600000,0x00000000f9c00000)
+  to   space 6144K, 0% used [0x00000000f9c00000,0x00000000f9c00000,0x00000000fa200000)
+ ParOldGen       total 60928K, used 42291K [0x00000000c2a00000, 0x00000000c6580000, 0x00000000eb900000)
+  object space 60928K, 69% used [0x00000000c2a00000,0x00000000c534cc00,0x00000000c6580000)
+ Metaspace       used 27307K, capacity 28878K, committed 29824K, reserved 1075200K
+  class space    used 3078K, capacity 3608K, committed 3968K, reserved 1048576K
+
+Card table byte_map: [0x00007f3d334b2000,0x00007f3d3369e000] byte_map_base: 0x00007f3d32e9d000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f3d49b56300
+ Begin Bits: [0x00007f3d31400000, 0x00007f3d32358000)
+ End Bits:   [0x00007f3d32358000, 0x00007f3d332b0000)
+
+Polling page: 0x00007f3d4a9aa000
+
+CodeCache: size=245760Kb used=21840Kb max_used=21922Kb free=223919Kb
+ bounds [0x00007f3d33a5e000, 0x00007f3d34ffe000, 0x00007f3d42a5e000]
+ total_blobs=6279 nmethods=5581 adapters=616
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 3499.720 Thread 0x00007f3d440c1000 nmethod 6901 0x00007f3d34f7cf50 code [0x00007f3d34f7d0c0, 0x00007f3d34f7d388]
+Event: 3499.802 Thread 0x00007f3d440c1000 6902       3       java.util.logging.LogManager$LoggerContext::getRootLogger (8 bytes)
