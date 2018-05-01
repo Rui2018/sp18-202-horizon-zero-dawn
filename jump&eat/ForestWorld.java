@@ -55,18 +55,27 @@ public class ForestWorld extends World
         
         int count = getObjects(StarForest.class).size();
         score.setScore(count);
-       if(count == 0){
-           Win smell = new Win();
-           addObject(smell, getWidth()/2, getHeight()/2);
-           winFlag = 1;
-           Greenfoot.stop();
-        }
+       //if(count == 0){
+           //Win smell = new Win();
+           //addObject(smell, getWidth()/2, getHeight()/2);
+           //winFlag = 1;
+           //Greenfoot.stop();
+        //}
         /*
         if(count == 0){
             Greenfoot.setWorld(new ForestWorld());
             
         }
         */
+       if(count == 0)
+        {
+            
+            //Win win = new Win();
+            //addObject(win, getWidth()/2, getHeight()/2);
+            //win_flag = 1;
+            Greenfoot.stop();
+            Greenfoot.setWorld(new DesertWorld());
+        }
         
         
     }
