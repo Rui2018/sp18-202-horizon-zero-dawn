@@ -11,7 +11,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class StarForest extends Actor
+public class StarForest extends Actor implements Stars
 {
     private int speed = 5;
     /**
