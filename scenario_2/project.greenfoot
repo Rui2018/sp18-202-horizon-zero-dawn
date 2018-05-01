@@ -12,7 +12,11 @@ class.Ground.image=ground.jpg
 class.Ground.superclass=greenfoot.Actor
 class.Inputbox.superclass=greenfoot.Actor
 class.Instructions.superclass=greenfoot.Actor
+<<<<<<< HEAD
+class.JumpWorld.image=s2.jpg
+=======
 class.JumpWorld.image=bg.png
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 class.JumpWorld.superclass=greenfoot.World
 class.Jumper.image=jumper_right.png
 class.Jumper.superclass=Mover
@@ -31,38 +35,38 @@ class.TitleScreen.image=s2.jpg
 class.TitleScreen.superclass=greenfoot.World
 class.Win.image=NYPT-WIN_how-to-beat-a-NYC-parking-ticket.png
 class.Win.superclass=greenfoot.Actor
-dependency1.from=Bullet
+dependency1.from=Ground
 dependency1.to=Jumper
 dependency1.type=UsesDependency
-dependency10.from=JumpWorld
+dependency10.from=Jumper
 dependency10.to=Ground
 dependency10.type=UsesDependency
 dependency11.from=JumpWorld
-dependency11.to=Enemy
+dependency11.to=SimpleTimer
 dependency11.type=UsesDependency
 dependency12.from=JumpWorld
-dependency12.to=SimpleTimer
+dependency12.to=Jumper
 dependency12.type=UsesDependency
 dependency13.from=JumpWorld
 dependency13.to=Score
 dependency13.type=UsesDependency
 dependency14.from=JumpWorld
-dependency14.to=GameOver
+dependency14.to=Win
 dependency14.type=UsesDependency
 dependency15.from=JumpWorld
-dependency15.to=Win
+dependency15.to=Ground
 dependency15.type=UsesDependency
-dependency16.from=Star
-dependency16.to=Bullet
+dependency16.from=JumpWorld
+dependency16.to=Star
 dependency16.type=UsesDependency
-dependency17.from=Star
-dependency17.to=Jumper
+dependency17.from=JumpWorld
+dependency17.to=Enemy
 dependency17.type=UsesDependency
-dependency18.from=Enemy
-dependency18.to=Jumper
+dependency18.from=JumpWorld
+dependency18.to=Instructions
 dependency18.type=UsesDependency
-dependency19.from=Enemy
-dependency19.to=Bullet
+dependency19.from=JumpWorld
+dependency19.to=Textbox
 dependency19.type=UsesDependency
 dependency2.from=Subject
 dependency2.to=Observer
@@ -73,36 +77,46 @@ dependency20.type=UsesDependency
 dependency21.from=Enemy
 dependency21.to=Bullet
 dependency21.type=UsesDependency
+<<<<<<< HEAD
+dependency3.from=TitleScreen
+dependency3.to=JumpWorld
+=======
 dependency3.from=Jumper
 dependency3.to=Ground
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 dependency3.type=UsesDependency
-dependency4.from=Jumper
-dependency4.to=GameOver
+dependency4.from=TitleScreen
+dependency4.to=Textbox
 dependency4.type=UsesDependency
 dependency5.from=Jumper
-dependency5.to=Bullet
+dependency5.to=Observer
 dependency5.type=UsesDependency
 dependency6.from=Jumper
-dependency6.to=Observer
+dependency6.to=GameOver
 dependency6.type=UsesDependency
 dependency7.from=Jumper
-dependency7.to=Enemy
+dependency7.to=JumpWorld
 dependency7.type=UsesDependency
-dependency8.from=JumpWorld
-dependency8.to=Star
+dependency8.from=Jumper
+dependency8.to=Bullet
 dependency8.type=UsesDependency
-dependency9.from=JumpWorld
-dependency9.to=Jumper
+dependency9.from=Jumper
+dependency9.to=Enemy
 dependency9.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
-mainWindow.height=803
+editor.fx.0.height=876
+editor.fx.0.width=1375
+editor.fx.0.x=65
+editor.fx.0.y=24
+mainWindow.height=876
 mainWindow.width=1375
 mainWindow.x=65
+<<<<<<< HEAD
+mainWindow.y=24
+package.numDependencies=21
+=======
 mainWindow.y=23
 package.numDependencies=0
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 package.numTargets=17
 project.charset=UTF-8
 readme.height=58
@@ -110,7 +124,11 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
+simulation.speed=36
+=======
 simulation.speed=47
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target1.height=50
 target1.name=Bullet
 target1.showInterface=false
@@ -136,7 +154,11 @@ target11.width=90
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
+target12.name=Proxy
+=======
 target12.name=Score
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
@@ -144,7 +166,11 @@ target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
+target13.name=Score
+=======
 target13.name=Proxy
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target13.showInterface=false
 target13.type=InterfaceTarget
 target13.typeParameters=
@@ -160,17 +186,29 @@ target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
+<<<<<<< HEAD
+target15.name=Observer
+target15.showInterface=false
+target15.type=InterfaceTarget
+=======
 target15.name=Enemy
 target15.showInterface=false
 target15.type=ClassTarget
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target15.typeParameters=
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
+<<<<<<< HEAD
+target16.name=Enemy
+target16.showInterface=false
+target16.type=ClassTarget
+=======
 target16.name=Observer
 target16.showInterface=false
 target16.type=InterfaceTarget
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a
 target16.typeParameters=
 target16.width=80
 target16.x=0
@@ -196,7 +234,7 @@ target3.name=SimpleTimer
 target3.showInterface=false
 target3.type=ClassTarget
 target3.typeParameters=
-target3.width=100
+target3.width=110
 target3.x=0
 target3.y=0
 target4.height=50
@@ -236,7 +274,7 @@ target8.name=TitleScreen
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
-target8.width=90
+target8.width=100
 target8.x=0
 target8.y=0
 target9.height=50
@@ -248,4 +286,8 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
+world.lastInstantiated=TitleScreen
+=======
 world.lastInstantiated=JumpWorld
+>>>>>>> 4c60703b9d8d26203e5b0e5fe04686529d6a243a

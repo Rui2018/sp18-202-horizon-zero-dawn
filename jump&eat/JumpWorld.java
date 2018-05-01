@@ -15,20 +15,22 @@ public class JumpWorld extends World
     private boolean corner = false;
     GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
     private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
-    
+
     public JumpWorld()
     {    
         super(900, 500, 1); 
         addObject(this.jumper, 30, 30);
         addObject(this.score, 880, 15);
-        
+
         createStars();
         createGround();
         createEnemy();
         score.setScore(0);
         this.timer.mark();
+        prepare();
+        Greenfoot.start();
     }
-    
+
     public void act() {
         if(timer.millisElapsed() > 2000 ) {
             createEnemy();
@@ -36,19 +38,19 @@ public class JumpWorld extends World
         }
         int count = getObjects(Star.class).size();
         score.setScore(totalStar - count);
-      
+
         if(count == 8)
         {
-            
+
             //Win win = new Win();
             //addObject(win, getWidth()/2, getHeight()/2);
             //win_flag = 1;
             Greenfoot.stop();
             Greenfoot.setWorld(new DesertWorld());
         }
-        
+
     }
-    
+
     public void createGround()
     {
         addObject(new Ground(0), 20, 80);
@@ -63,14 +65,12 @@ public class JumpWorld extends World
         addObject(new Ground(1), 420, 250);
         addObject(new Ground(-3), 500, 200);
         addObject(new Ground(1), 700, 150);
-        
-        
-        
+
         
     }
     public void createStars()
     {
-        
+
         for(int i = 0; i < totalStar; i++)
         {
             int randX = Greenfoot.getRandomNumber(881) + 10;
@@ -78,7 +78,7 @@ public class JumpWorld extends World
             addObject(new Star(), randX, randY);
         }
     }
-    
+
     public void createEnemy() {
         Enemy enemy = new Enemy();
         int x = corner? 0:900;
@@ -91,9 +91,9 @@ public class JumpWorld extends World
         }
         this.jumper.registerObserver(enemy);
     }
-    
+
     public void stopped() {
-      
+
         sound.stop();
         if(win_flag == 1) {
             Greenfoot.playSound("youwin.mp3");
@@ -102,15 +102,21 @@ public class JumpWorld extends World
             Greenfoot.playSound("gameover.wav");
         }
     }
-    
+
     public void started(){
-       sound.setVolume(50);
+        sound.setVolume(50);
         sound.playLoop();
     }
-    
+
     public void setLose(){
         win_flag = -1;
     }
-    
-    
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+    }
 }

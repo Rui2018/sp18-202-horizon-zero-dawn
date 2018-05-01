@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class JumpWorld extends World 
+public class Instruction extends World 
 {
     private SimpleTimer timer = new SimpleTimer();
     private Jumper jumper = new Jumper();
@@ -17,7 +17,7 @@ public class JumpWorld extends World
     private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
 
     
-    public JumpWorld()
+    public Instruction()
     {    
         super(900, 500, 1); 
         addObject(this.jumper, 30, 30);
@@ -34,18 +34,18 @@ public class JumpWorld extends World
     }
 
     public void act() {
-        //if(timer.millisElapsed() > 2000 ) {
-           // createEnemy();
-           // timer.mark();
-        //}
+        
         int count = getObjects(Star.class).size();
         score.setScore(totalStar - count);
-        if(count == 0)
+
+        if(count == 3)
         {
-            Win win = new Win();
-            addObject(win, getWidth()/2, getHeight()/2);
-            win_flag = 1;
+
+            //Win win = new Win();
+            //addObject(win, getWidth()/2, getHeight()/2);
+            //win_flag = 1;
             Greenfoot.stop();
+            Greenfoot.setWorld(new JumpWorld());
         }
     }
 
