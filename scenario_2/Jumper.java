@@ -7,7 +7,7 @@ public class Jumper extends Mover implements Subject
     private int speed = 7;
     private int vSpeed = 0;
     private int acceleration = 2;
-    private int jumpStrength = 16;
+    private int jumpStrength = 20;
     private boolean jumping;
     private int direction;
     private List<Observer> observers = new ArrayList<>();
