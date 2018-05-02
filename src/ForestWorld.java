@@ -17,7 +17,7 @@ public class ForestWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    private int totalStars = 5;
+    private int totalStar = 8;
     //private int stoneSpeed = 5;
     private int bulletSpeed = 5;
     private int groundSpeed = 0;
@@ -59,7 +59,7 @@ public class ForestWorld extends World
         }
         
         int count = getObjects(StarForest.class).size();
-        score.setScore(count);
+        score.setScore(totalStar - count);
        
        if(count == 0)
         {
@@ -76,8 +76,8 @@ public class ForestWorld extends World
     
    //Create stars at random position
     public void createStars(){
-        for(int i = 0; i < totalStars; i++){
-            addObject(new StarForest(), Greenfoot.getRandomNumber(300), Greenfoot.getRandomNumber(200));
+        for(int i = 0; i < totalStar; i++){
+            addObject(new StarForest(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(400));
         }
     }
     
