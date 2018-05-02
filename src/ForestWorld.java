@@ -36,6 +36,10 @@ public class ForestWorld extends World
        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         
         super(900, 500, 1);
+        GreenfootImage bg = new GreenfootImage("FlappyBackdrop.png");
+        bg.scale(getWidth(),getHeight());
+        setBackground(bg);
+        
         addObject(jumper, 30, 30);
         addObject(score, 830, 15);
         createStars();
