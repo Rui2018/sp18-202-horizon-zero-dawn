@@ -28,6 +28,7 @@ public class Star extends Actor
         }
     }
     
+    
     public void disappear()
     {
         Actor jumper = getOneIntersectingObject(Jumper.class);
