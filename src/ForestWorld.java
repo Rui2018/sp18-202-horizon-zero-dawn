@@ -126,8 +126,7 @@ public class ForestWorld extends World
   
 
     public void started(){
-        //sound.play();
-        //sound.playLoop();
+        State.startMusic();
     }
     
     public void stopped(){
