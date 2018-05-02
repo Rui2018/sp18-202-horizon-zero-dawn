@@ -9,12 +9,13 @@ import greenfoot.*;
 public class InstructionWorld extends World 
 {
     private SimpleTimer timer = new SimpleTimer();
-    private Jumper_instruction jumper = new Jumper_instruction();
+    //private Jumper_instruction jumper = new Jumper_instruction();
+    private Jumper jumper = new Jumper();
     private Score score = new Score();
     private int totalStar = 4;
     private boolean corner = false;
-    GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
-    private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
+    //GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
+    //private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
     
     public InstructionWorld()
     {    
@@ -24,17 +25,15 @@ public class InstructionWorld extends World
     }
     
     public void act() {
-        //if(timer.millisElapsed() > 2000 ) {
-           // createEnemy();
-           // timer.mark();
-        //}
+        
         int count = getObjects(stillStar.class).size();
         score.setScore(totalStar - count);
         if(count == 0)
         {
-            Win win = new Win();
-            addObject(win, getWidth()/2, getHeight()/2);
-            win_flag = 1;
+            //Win win = new Win();
+            //addObject(win, getWidth()/2, getHeight()/2);
+            //win_flag = 1;
+            Greenfoot.stop();
             Greenfoot.setWorld(new Instruction());
         }
     }
@@ -57,25 +56,20 @@ public class InstructionWorld extends World
     }
 
    public void stopped() {
-        sound.stop();
-        if(win_flag == 1) {
-            Greenfoot.playSound("youwin.mp3");
-        }
-        else if(win_flag == -1){
+        
+       
+        if(State.lose() == -1){
            Greenfoot.setWorld(new InstructionWorld());
+           State.win_flag = 0;
            Greenfoot.start();
-        }
+        }     
         
     }
 
     public void started(){
-        sound.setVolume(50);
-        sound.playLoop();
+        State.startMusic();
     }
 
-    public void setLose(){
-        win_flag = -1;
-    }
 
     /**
      * Prepare the world for the start of the program.
@@ -91,7 +85,6 @@ public class InstructionWorld extends World
         createText();
         score.setScore(0);
         this.timer.mark();
-        sound.playLoop();
     }
     
     public void createText(){
