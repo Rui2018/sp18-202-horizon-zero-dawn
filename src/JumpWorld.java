@@ -102,8 +102,7 @@ public class JumpWorld extends World
     }
 
     public void started(){
-        //sound.setVolume(50);
-        //sound.playLoop();
+        State.startMusic();
     }
 
 }
