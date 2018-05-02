@@ -46,7 +46,7 @@ public class DesertWorld extends World
         }
         int count = getObjects(Juice.class).size();
         score.setScore(totalJuice - count);
-        if(count == 7)
+        if(count == 0)
         {
             Win win = new Win();
             addObject(win, getWidth()/2, getHeight()/2);

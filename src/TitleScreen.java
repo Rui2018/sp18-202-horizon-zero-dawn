@@ -22,7 +22,6 @@ public class TitleScreen extends World implements Proxy
         super(900, 500, 1);
         Greenfoot.start();
         //String input = JOptionPane.showInputDialog("Please enter password");
-        prepare();
     }
 
     public void act()
@@ -31,20 +30,16 @@ public class TitleScreen extends World implements Proxy
         if(input!=null){
             passcode(input);
 
-            if (flag) Greenfoot.setWorld(new InstructionWorld());
+            if (flag) {
+                State.startMusic();
+                Greenfoot.setWorld(new InstructionWorld());
+            }
 
         }
         else Greenfoot.setWorld(new TitleScreen());
         //if (Greenfoot.isKeyDown("space")) Greenfoot.setWorld(new JumpWorld());
     }
 
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
-    }
     
     public void passcode(String input)
     {
