@@ -13,9 +13,9 @@ public class Instruction extends World
     private Score score = new Score();
     private int totalStar = 5;
     private boolean corner = false;
-    GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
-    private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
-
+    // GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
+    //private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
+    
     
     public Instruction()
     {    
@@ -29,8 +29,8 @@ public class Instruction extends World
         createText();
         score.setScore(0);
         this.timer.mark();
-        prepare();
-       
+
+       Greenfoot.start();
     }
 
     public void act() {
@@ -88,32 +88,17 @@ public class Instruction extends World
 
     public void stopped() {
 
-        sound.stop();
-        if(win_flag == 1) {
-            Greenfoot.playSound("youwin.mp3");
-        }
-        else if(win_flag == -1){
-            Greenfoot.playSound("gameover.wav");
-        }
+        if(State.lose() == -1){
+           Greenfoot.setWorld(new Instruction());
+           State.win_flag = 0;
+           Greenfoot.start();
+        }   
     }
 
     public void started(){
-        sound.setVolume(50);
-        sound.playLoop();
+        State.startMusic();
     }
 
-    public void setLose(){
-        win_flag = -1;
-    }
-
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
-
-    }
     
     public void createText(){
         String text1 = "Let's start!";

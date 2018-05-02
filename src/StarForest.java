@@ -11,23 +11,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class StarForest extends Actor implements Stars
+public class StarForest extends Star implements Stars
 {
-    private int speed = 5;
-    /**
-     * Act - do whatever the StarForest wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     public void act() 
     {
-        move(speed);
-        turn();
+        moveAround(5);
         disappear();
         // Add your action code here.
     }  
     
      //The star will rebound when it meets other objects
-    public void turn(){
+    public void moveAround(int n){
+        move(n);
         if(Greenfoot.getRandomNumber(100) < 5){
             turn(Greenfoot.getRandomNumber(90) - 45);
         }
@@ -44,7 +40,7 @@ public class StarForest extends Actor implements Stars
 
     public void disappear(){
         //When neet the jumper, the star will disappear
-        Actor jumper = getOneIntersectingObject(JumperForest.class);
+        Actor jumper = getOneIntersectingObject(Jumper.class);
         if(jumper != null){
             getWorld().removeObject(this);
             Greenfoot.playSound("nsmbwiiCoin.wav");

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Juice extends Actor implements Stars
+public class Juice extends Star implements Stars
 {
     /**
      * Act - do whatever the Juice wants to do. This method is called whenever
@@ -15,13 +15,13 @@ public class Juice extends Actor implements Stars
     public void act() 
     {
         // Add your action code here.
-        moveAround();
+        moveAround(2);
         disappear();
     }
     
-    public void moveAround()
+    public void moveAround(int n)
     {
-        move(2);
+        move(n);
         if(Greenfoot.getRandomNumber(100) < 10)
         {
             turn(Greenfoot.getRandomNumber(90) - 45);
@@ -38,7 +38,7 @@ public class Juice extends Actor implements Stars
     
     public void disappear()
     {
-        Actor jumper = getOneIntersectingObject(JumperDesert.class);
+        Actor jumper = getOneIntersectingObject(Jumper.class);
         if(jumper != null)
         {
             getWorld().removeObject(this);

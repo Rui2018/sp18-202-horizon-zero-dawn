@@ -21,13 +21,14 @@ public class ForestWorld extends World
     //private int stoneSpeed = 5;
     private int bulletSpeed = 5;
     private int groundSpeed = 0;
-    private JumperForest jumper = new JumperForest();
+    //private JumperForest jumper = new JumperForest();
+    private Jumper jumper = new Jumper();
     private boolean flag = false;
-    private int winFlag = 0;
+    //private int win_flag = 0;
     // 0 means ongoing, -1 means loose, 1 means win
     private SimpleTimer timer = new SimpleTimer();
     private Score score = new Score();
-    GreenfootSound bgmBackGround = new GreenfootSound("nyan_cat.mp3");
+    GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
 
     
     public ForestWorld()
@@ -55,24 +56,13 @@ public class ForestWorld extends World
         
         int count = getObjects(StarForest.class).size();
         score.setScore(count);
-       //if(count == 0){
-           //Win smell = new Win();
-           //addObject(smell, getWidth()/2, getHeight()/2);
-           //winFlag = 1;
-           //Greenfoot.stop();
-        //}
-        /*
-        if(count == 0){
-            Greenfoot.setWorld(new ForestWorld());
-            
-        }
-        */
+       
        if(count == 3)
         {
             
             Win win = new Win();
             addObject(win, getWidth()/2, getHeight()/2);
-            winFlag = 1;
+            State.setWin();
             Greenfoot.stop();
            
         }
@@ -116,39 +106,32 @@ public class ForestWorld extends World
     
     //Create 10 grounds, 4 static, 6 move
     public void createGround(){
-        addObject(new GroundForest(0), 20, 70);
-        addObject(new GroundForest(0), 400, 170);
-        addObject(new GroundForest(0), 800, 320);
-        addObject(new GroundForest(0), 300, 420);
+        addObject(new Ground(0), 20, 70);
+        addObject(new Ground(0), 400, 170);
+        addObject(new Ground(0), 800, 320);
+        addObject(new Ground(0), 300, 420);
        
       // addObject(new GroundForest(1), 200, 180);
-        addObject(new GroundForest(2), 500, 220);
-        addObject(new GroundForest(1), 650, 470);
+        addObject(new Ground(2), 500, 220);
+        addObject(new Ground(1), 650, 470);
         
-        addObject(new GroundForest(-1), 80, 370);
-        addObject(new GroundForest(-2), 600, 120);
-        addObject(new GroundForest(-3), 150, 270); 
+        addObject(new Ground(-1), 80, 370);
+        addObject(new Ground(-2), 600, 120);
+        addObject(new Ground(-3), 150, 270); 
     }
-    
-    public void Lose(){
-        winFlag = -1;
-    }
-    
-    public void Victory(){
-        winFlag = 1;
-    }
-    
+  
+
     public void started(){
-        bgmBackGround.play();
-        bgmBackGround.playLoop();
+        //sound.play();
+        //sound.playLoop();
     }
     
     public void stopped(){
-        bgmBackGround.stop();
-        if(winFlag == 1) {
+        sound.stop();
+        if(State.win_flag == 1) {
             Greenfoot.playSound("youwin.mp3");
         }
-        else if(winFlag == -1){
+        else if(State.win_flag == -1){
             Greenfoot.playSound("gameover.wav");
         }
     }

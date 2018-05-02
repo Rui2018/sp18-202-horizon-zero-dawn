@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class stillStar extends Actor
+public class stillStar extends Star
 {
     
     public void act() 
@@ -31,7 +31,7 @@ public class stillStar extends Actor
     
     public void disappear()
     {
-        Actor jumper = getOneIntersectingObject(Jumper_instruction.class);
+        Actor jumper = getOneIntersectingObject(Jumper.class);
         if(jumper != null)
         {
             getWorld().removeObject(this);
