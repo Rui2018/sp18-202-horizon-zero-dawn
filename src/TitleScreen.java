@@ -12,6 +12,8 @@ public class TitleScreen extends World implements Proxy
 
     //private String input; 
     private Boolean flag = false; 
+    // private GreenfootImage background = new GreenfootImage("title.jpg");
+    // this.setBackground(img);
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -20,13 +22,16 @@ public class TitleScreen extends World implements Proxy
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 500, 1);
+        // setBackground(background);
         Greenfoot.start();
         //String input = JOptionPane.showInputDialog("Please enter password");
     }
 
     public void act()
     {
-        String input = JOptionPane.showInputDialog("Please enter password");
+        
+        JOptionPane option = new JOptionPane();
+        String input = option.showInputDialog("Please enter password");
         if(input!=null){
             passcode(input);
 
@@ -34,9 +39,12 @@ public class TitleScreen extends World implements Proxy
                 State.startMusic();
                 Greenfoot.setWorld(new InstructionWorld());
             }
-
         }
-        else Greenfoot.setWorld(new TitleScreen());
+        else
+        {
+            Greenfoot.stop();
+        }
+        // else Greenfoot.setWorld(new TitleScreen());
         //if (Greenfoot.isKeyDown("space")) Greenfoot.setWorld(new JumpWorld());
     }
 
