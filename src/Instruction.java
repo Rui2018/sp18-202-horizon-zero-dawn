@@ -38,7 +38,7 @@ public class Instruction extends World
         int count = getObjects(Star.class).size();
         score.setScore(totalStar - count);
 
-        if(count == 3)
+        if(count == 0)
         {
 
             //Win win = new Win();

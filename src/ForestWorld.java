@@ -57,7 +57,7 @@ public class ForestWorld extends World
         int count = getObjects(StarForest.class).size();
         score.setScore(count);
        
-       if(count == 3)
+       if(count == 0)
         {
             
             Win win = new Win();

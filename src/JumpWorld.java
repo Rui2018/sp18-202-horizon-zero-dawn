@@ -40,7 +40,7 @@ public class JumpWorld extends World
         int count = getObjects(Star.class).size();
         score.setScore(totalStar - count);
 
-        if(count == 8)
+        if(count == 0)
         {
 
             //Win win = new Win();
