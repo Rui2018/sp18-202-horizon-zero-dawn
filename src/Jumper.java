@@ -75,12 +75,14 @@ public class Jumper extends Mover implements Subject
     public void checkGameOver()
     {
         Actor enemy = getOneIntersectingObject(Enemy.class);
-        if(getY() >= getWorld().getHeight() - 1 || enemy != null)
+        Actor stone = getOneIntersectingObject(Stone.class);
+        if(getY() >= getWorld().getHeight() - 1 || enemy != null || stone != null)
         {
-            GameOver gameOver = new GameOver();
-            
-            getWorld().addObject(gameOver, getWorld().getWidth()/2, getWorld().getHeight()/2);
-            ((JumpWorld)getWorld()).setLose();
+            if(getWorld() instanceof JumpWorld || getWorld() instanceof DesertWorld || getWorld() instanceof ForestWorld){
+                GameOver gameOver = new GameOver();   
+                getWorld().addObject(gameOver, getWorld().getWidth()/2, getWorld().getHeight()/2);
+            }
+            State.setLose();
             Greenfoot.stop();
         }
     }
@@ -139,6 +141,7 @@ public class Jumper extends Mover implements Subject
             moveToGround(ground);
             return true;
         }
+        
         
     }
     

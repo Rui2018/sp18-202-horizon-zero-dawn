@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class Enemy extends Actor implements Observer
+public class Enemy extends Mover implements Observer
 {
     private int targetX;
     private int targetY;

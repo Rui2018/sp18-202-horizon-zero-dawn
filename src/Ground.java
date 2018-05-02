@@ -19,6 +19,13 @@ public class Ground extends Actor
     public void act() 
     {
         moveLeftRight();
+        if(getWorld() instanceof DesertWorld){
+            Actor jumper = getOneObjectAtOffset(0,-31,Jumper.class);
+            if (jumper != null) {
+                jumper.setLocation(jumper.getX() + speed, jumper.getY() );
+            }
+        }
+        
     }
     
     
@@ -27,7 +34,8 @@ public class Ground extends Actor
          move(this.speed);
          if(getX() >= getWorld().getWidth() - getImage().getWidth()/2 || getX() <= getImage().getWidth()/2)
          {
-             turn(180);
+             //turn(180);
+             speed = -speed;
          }       
     }
            
