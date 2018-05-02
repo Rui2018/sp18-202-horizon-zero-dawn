@@ -36,7 +36,11 @@ public class Instructions extends Actor implements Observer
         img2 = new GreenfootImage(400, 60);
         img2.setColor(new Color(0, 0, 0, 0));
         img2.fill();
+<<<<<<< HEAD
         img2.setColor(new Color(192, 230, 243));
+=======
+        img2.setColor(new Color(0, 0, 100));
+>>>>>>> FW
         img2.setFont(new Font("OptimusPrinceps", false, false , 20));
         img2.drawString(instruction, 1, 18);
         
@@ -44,6 +48,7 @@ public class Instructions extends Actor implements Observer
     
     public void act()
     {
+<<<<<<< HEAD
         if (targetX > (textX-220))
         {
             this.setImage(img2);
@@ -54,6 +59,21 @@ public class Instructions extends Actor implements Observer
             getWorld().removeObject(this);
         }
         
+=======
+        if (targetX != 0)
+        {
+            if (targetX > (textX-220))
+            {
+                getWorld().addObject(this, textX, textY);
+                this.setImage(img2);
+            }
+            
+            if (targetX > textX || targetY > textY)
+            {
+                getWorld().removeObject(this);
+            }
+        }
+>>>>>>> FW
     }
     
     public void update(int x, int y)

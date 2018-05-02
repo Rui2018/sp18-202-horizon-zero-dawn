@@ -1,14 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
-public class Star extends Actor
+/**
+ * Write a description of class Juice here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Juice extends Actor implements Stars
 {
-    
+    /**
+     * Act - do whatever the Juice wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act() 
     {
+        // Add your action code here.
         moveAround();
         disappear();
-        
     }
     
     public void moveAround()
@@ -30,7 +38,7 @@ public class Star extends Actor
     
     public void disappear()
     {
-        Actor jumper = getOneIntersectingObject(Jumper.class);
+        Actor jumper = getOneIntersectingObject(JumperDesert.class);
         if(jumper != null)
         {
             getWorld().removeObject(this);
