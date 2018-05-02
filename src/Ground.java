@@ -19,7 +19,7 @@ public class Ground extends Actor
     public void act() 
     {
         moveLeftRight();
-        if(getWorld() instanceof JumpWorld || getWorld() instanceof DesertWorld || getWorld() instanceof ForestWorld){
+        if(getWorld() instanceof Instruction || getWorld() instanceof JumpWorld || getWorld() instanceof DesertWorld || getWorld() instanceof ForestWorld){
             Actor jumper = getOneObjectAtOffset(0,-31,Jumper.class);
             if (jumper != null) {
                 jumper.setLocation(jumper.getX() + speed, jumper.getY() );
