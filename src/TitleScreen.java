@@ -11,8 +11,8 @@ public class TitleScreen extends World
     //private Textbox password;
 
     private Boolean flag = false; 
-    private Button txt1 = new Button();
-    private Button txt2 = new Button();
+    private Button txt1;
+    private Button txt2;
     
     // private CommandReceiver newuser = new CommandReceiver(new InstructionWorld());
     // private CommandReceiver olduser = new CommandReceiver(new JumpWorld());
