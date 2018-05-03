@@ -97,7 +97,7 @@ public class InstructionWorld extends World
         this.jumper.registerObserver(Text2);
         
         
-        String text3 = "Keep going!";
+        String text3 = "Collect all starts to enter next level";
         Instructions Text3 = new Instructions(text3, 677, 280);
         addObject(Text3, 677, 280);
         this.jumper.registerObserver(Text3);
