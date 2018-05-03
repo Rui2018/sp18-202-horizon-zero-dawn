@@ -9,13 +9,11 @@ import greenfoot.*;
 public class InstructionWorld extends World 
 {
     private SimpleTimer timer = new SimpleTimer();
-    //private Jumper_instruction jumper = new Jumper_instruction();
+
     private Jumper jumper = new Jumper();
     private Score score = new Score();
     private int totalStar = 4;
     private boolean corner = false;
-    //GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
-    //private int win_flag = 0; // 0 means ongoing, -1 means loose, 1 means win
     
     public InstructionWorld()
     {    

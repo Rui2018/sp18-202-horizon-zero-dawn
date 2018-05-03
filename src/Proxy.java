@@ -8,5 +8,5 @@ public interface Proxy
 {
     // instance variables - replace the example below with your own
 
-   public void passcode(String input);
+   public boolean passcode(String input);
 }
