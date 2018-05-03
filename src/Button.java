@@ -1,20 +1,20 @@
 import greenfoot.*;
  
-public class Button extends Actor implements Command
+public class Button extends Actor
 {
     private boolean clicked;
     String buttonText = "";
-    private World wd;
+    private CommandReceiver r;
  
     public Button()
     {
         ;
     }
  
-    public Button(String text, World w)
+    public Button(String text, CommandReceiver re)
     {
         setText(text);
-        wd = w;
+        r = re;
     }
  
     public void setText(String text)
@@ -36,7 +36,7 @@ public class Button extends Actor implements Command
         
         if(Greenfoot.mouseClicked(this)) 
         {
-            this.execute();
+            r.execute();
             State.startMusic();
         }
      
@@ -52,8 +52,4 @@ public class Button extends Actor implements Command
         return buttonText;
     }
     
-    public void execute()
-    {
-        Greenfoot.setWorld(wd);
-    }
 }

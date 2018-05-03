@@ -25,8 +25,10 @@ public class TitleScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 500, 1);
-        txt1 = new Button("New Player", new InstructionWorld());
-        txt2 = new Button("Return Player", new JumpWorld());
+        CommandReceiver r1 = new CommandReceiver(new InstructionWorld());
+        CommandReceiver r2 = new CommandReceiver(new JumpWorld());
+        txt1 = new Button("New Player", r1);
+        txt2 = new Button("Return Player", r2);
         addObject(txt1, 500, 200);
         addObject(txt2, 500, 300);
         
