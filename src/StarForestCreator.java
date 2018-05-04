@@ -6,7 +6,7 @@
  */
 public class StarForestCreator extends Creator 
 {
-    public Stars getStars(){
+    public Star getStars(){
         return new StarForest();
     }
 }

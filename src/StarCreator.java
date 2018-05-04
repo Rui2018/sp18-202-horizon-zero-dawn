@@ -7,7 +7,7 @@
 public class StarCreator extends Creator 
 {
     // instance variables - replace the example below with your own
-    public Stars getStars(){
+    public Star getStars(){
         return new Star();
     }
 }

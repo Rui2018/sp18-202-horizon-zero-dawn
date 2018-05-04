@@ -82,7 +82,7 @@ public class DesertWorld extends World
         {
             int randX = Greenfoot.getRandomNumber(881) + 10;
             int randY = Greenfoot.getRandomNumber(666) +10 ;
-            addObject(new Juice(), randX, randY );
+            addObject(new JuiceCreator().getStars(), randX, randY );
         }
     }
     

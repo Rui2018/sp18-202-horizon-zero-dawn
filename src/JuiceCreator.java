@@ -6,7 +6,7 @@
  */
 public class JuiceCreator extends Creator 
 {
-    public Stars getStars(){
+    public Star getStars(){
         return new Juice();
     }
 }

@@ -69,7 +69,7 @@ public class Instruction extends World
             //int randX = Greenfoot.getRandomNumber(500) + 10;
             //int randY = Greenfoot.getRandomNumber(200) + 10;
             //addObject(new Star(), randX, randY);
-            addObject(new Star(),(50 +100*i), (80+50*i));
+            addObject(new StarCreator().getStars(),(50 +100*i), (80+50*i));
         }
     }
 

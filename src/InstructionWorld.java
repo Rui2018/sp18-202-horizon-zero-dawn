@@ -47,10 +47,10 @@ public class InstructionWorld extends World
     }
     public void createStars()
     {        
-        addObject(new stillStar(), 200, 265);
-        addObject(new stillStar(), 380, 185);
-        addObject(new stillStar(), 560, 255);
-        addObject(new stillStar(), 740, 325);
+        addObject(new StillStarCreator().getStars(), 200, 265);
+        addObject(new StillStarCreator().getStars(), 380, 185);
+        addObject(new StillStarCreator().getStars(), 560, 255);
+        addObject(new StillStarCreator().getStars(), 740, 325);
     }
 
    public void stopped() {

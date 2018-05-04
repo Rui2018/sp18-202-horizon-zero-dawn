@@ -29,6 +29,7 @@ public class ForestWorld extends World
     private SimpleTimer timer = new SimpleTimer();
     private Score score = new Score();
     GreenfootSound sound = new GreenfootSound("nyan_cat.mp3");
+    
 
     
     public ForestWorld()
@@ -39,6 +40,7 @@ public class ForestWorld extends World
         GreenfootImage bg = new GreenfootImage("FlappyBackdrop.png");
         bg.scale(getWidth(),getHeight());
         setBackground(bg);
+        
         
         addObject(jumper, 30, 30);
         addObject(score, 830, 15);
@@ -77,7 +79,8 @@ public class ForestWorld extends World
    //Create stars at random position
     public void createStars(){
         for(int i = 0; i < totalStar; i++){
-            addObject(new StarForest(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(400));
+            addObject(new StarForestCreator().getStars(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(400));
+            
         }
     }
     

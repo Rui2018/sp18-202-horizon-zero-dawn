@@ -6,7 +6,7 @@
  */
 public class StillStarCreator extends Creator 
 {
-   public Stars getStars(){
+   public Star getStars(){
         return new stillStar();
     }
 }

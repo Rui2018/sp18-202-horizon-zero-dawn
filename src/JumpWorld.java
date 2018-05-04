@@ -76,7 +76,7 @@ public class JumpWorld extends World
         {
             int randX = Greenfoot.getRandomNumber(881) + 10;
             int randY = Greenfoot.getRandomNumber(481) + 10;
-            addObject(new Star(), randX, randY);
+            addObject(new StarCreator().getStars(), randX, randY);
         }
     }
 

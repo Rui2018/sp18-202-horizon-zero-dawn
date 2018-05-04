@@ -6,8 +6,6 @@
  */
 public abstract class Creator  
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    public abstract Stars getStars();
+    public abstract Star getStars();
 }
