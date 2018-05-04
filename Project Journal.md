@@ -29,7 +29,7 @@ Rui Guo
 3. Make team plan and personal plan for the project.
 
 ### XP values:
-Communication: We communicate face to face or online everyday to find the most suitable game. We will exchange our ideas to create the best solution to our problem.
+Communication: We communicate face to face or online everyday to find the most suitable game. We exchange our ideas to create the best solution to our problem.
 
 ## Team member name:
 
