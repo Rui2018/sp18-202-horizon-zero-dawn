@@ -24,7 +24,12 @@ Rui Guo
 
 ### What I plan to do:
 
-1. Discuss with my team members 
+1. Discuss with my teammates, and design a game that we are all interested.
+2. Decide the game rules.
+3. Make team plan and personal plan for the project.
+
+### XP values:
+Communication: We communicate face to face or online everyday to find the most suitable game. We will exchange our ideas to create the best solution to our problem.
 
 ## Team member name:
 
@@ -36,18 +41,6 @@ Fan Wu
 
 ### XP values:
 //
-
-## Team member name:
-
-Yanjun Zang
-
-### What I plan to do:
-
-// 
-
-### XP values:
-//
-
 ___
 # Horizon-Zero-Dawn, Sprint #2
 
@@ -100,32 +93,6 @@ Rui Guo
 
 ### What blockers I have:
 1. Need  
-
-## Team member name:
-
-Fan Wu
-
-### What I plan to do:
-// 
-
-### What blockers I have:
-//
-
-### XP values:
-//
-
-## Team member name:
-
-Yanjun Zang
-
-### What I plan to do:
-// 
-
-### What blockers I have:
-//
-
-### XP values:
-//
 ___
 # Horizon-Zero-Dawn, Sprint #3
 
@@ -188,35 +155,6 @@ Rui Guo
 ### What blockers I have:
 
 1. Tried  
-
-## Team member name:
-
-Fan Wu
-
-### What I plan to do:
-// 
-
-### What blockers I have:
-//
-
-### What I did since the last weekly scrum:
-//
-
-### XP values:
-//
-
-## Team member name:
-
-Yanjun Zang
-
-### What I plan to do:
-// 
-
-### What blockers I have:
-//
-
-### XP values:
-//
 ___
 # Horizon-Zero-Dawn, Sprint #4
 
@@ -236,7 +174,8 @@ Nanzhu Zhang
 
 1. Discuss with my team members on how to make our ad video. 
 
-### What blockers I have:
+### XP values:
+Courage: Need to tell the truth about progress. During the last sprint, we combined our work together thus a lot of problems happened. We have to have the courage the tell the truth where the problem is and how to solve it. We have to adapt to changes to the work we've done. 
 
 ## Team member name:
 Shikai Jin
@@ -266,32 +205,3 @@ Rui Guo
 1. Discuss 
 
 ### What blockers I have:
-
-## Team member name:
-
-Fan Wu
-
-### What I plan to do:
-// 
-
-### What blockers I have:
-//
-
-### What I did since the last weekly scrum:
-//
-
-### XP values:
-//
-
-## Team member name:
-
-Yanjun Zang
-
-### What I plan to do:
-// 
-
-### What blockers I have:
-//
-
-### XP values:
-//
