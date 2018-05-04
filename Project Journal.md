@@ -18,7 +18,12 @@ Nanzhu Zhang
 1. First scrum, so no blockers yet. 
 
 
-
+## Team member name:
+Shikai Jin
+### What I plan to do
+1. Discuss withe teamates to find a game design for this project
+2. Setting my personal develop schedule for the project in the following month
+___
 # Horizon-Zero-Dawn, Sprint #2
 
 ## Team member name:
@@ -39,7 +44,17 @@ Nanzhu Zhang
 
 ### What blockers I have:
 
-
+## Team Member name:
+Shikai Jin
+### What I did since the last weekly scrum:
+1. Read understanding the basic code structure set by Yanjun
+2. Try to write the basic structure for scenairo 4
+### What I plan to do:
+1. Finish scenario 4, adding images for the star and background etc. in this level
+2. Add functions to let the jumper be able to go with the ground in the scene rather than standing still when the ground is moving
+### What blockers I have:
+The greenfoot structure needs some time to understand and transform into the shape I need it be.
+___
 # Horizon-Zero-Dawn, Sprint #3
 
 ## Team member name:
@@ -67,9 +82,19 @@ Nanzhu Zhang
 
 1. Tried several different strategies but still cannot make the instructions be invisible at the beginning and then appear when the jumper getting closer.
 2. The cancel button in the popup screen will cause problem. 
+## Team member name:
+Shikai Jin
+### What I did since the last weekly scrum:
+1. Finsh the scenario 4 in the game
+2. Change the behavior of the ground to make the jumper be able to go with the ground
 
+### What I plan to do:
+1. Play the game and try to debug
+2. Finish the documents listed in the requirements
 
-
+### What blockers I have:
+1. Tried to apply observer pattern to the ground-jumper pair and failed due to greenfoot deisng for actors
+___
 # Horizon-Zero-Dawn, Sprint #4
 
 ## Team member name:
@@ -90,5 +115,16 @@ Nanzhu Zhang
 
 ### What blockers I have:
 
+## Team member name:
+Shikai Jin
 
+### What I did since the last weekly scrum:
+1. Debug the game, fix some bugs
+2. Maintain the scrum task board
+3. Add some documents
 
+### What I plan to do:
+Finish all the left tasks in the project
+
+### What blockers I have:
+1. Some requiremnts are not clear enough, needs some time to get the concept built.
