@@ -9,6 +9,9 @@ Nanzhu Zhang
 1. Discuss with my team members and decide what game we plane to build and the basic rules of the game.
 2. Once decided, start to build basic classes needed for the game and choose a design pattern that suit our game. 
 
+### XP values:
+Communication: Talk with all the team members and exchange our ideas on what kind of game we want to make. Figure out the best plane that will suit and envolve everyone in our team together. 
+
 ## Team member name:
 Shikai Jin
 ### What I plan to do
