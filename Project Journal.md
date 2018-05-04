@@ -25,6 +25,17 @@ Rui Guo
 ### What I plan to do:
 
 1. Discuss with my team members 
+
+## Team member name:
+
+Fan Wu
+
+### What I plan to do:
+
+// 
+
+### XP values:
+//
 ___
 # Horizon-Zero-Dawn, Sprint #2
 
