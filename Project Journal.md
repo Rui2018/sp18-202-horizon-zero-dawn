@@ -169,7 +169,8 @@ Nanzhu Zhang
 
 1. Discuss with my team members on how to make our ad video. 
 
-### What blockers I have:
+### XP values:
+Courage: Need to tell the truth about progress. During the last sprint, we combined our work together thus a lot of problems happened. We have to have the courage the tell the truth where the problem is and how to solve it. We have to adapt to changes to the work we've done. 
 
 ## Team member name:
 Shikai Jin
