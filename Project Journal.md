@@ -116,6 +116,10 @@ Nanzhu Zhang
 
 1. Tried several different strategies but still cannot make the instructions be invisible at the beginning and then appear when the jumper getting closer.
 2. The cancel button in the popup screen will cause problem. 
+
+### XP values:
+Respect: Respect everyone as a valued team member. Every is trying their best to make progress for our project. We all contribute value to our team.  
+
 ## Team member name:
 Shikai Jin
 ### What I did since the last weekly scrum:
