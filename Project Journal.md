@@ -4,19 +4,10 @@
 
 Nanzhu Zhang
 
-### What I did since the last weekly scrum:
-
-1. What I did since the last weekly scrum:
-
 ### What I plan to do:
 
 1. Discuss with my team members and decide what game we plane to build and the basic rules of the game.
 2. Once decided, start to build basic classes needed for the game and choose a design pattern that suit our game. 
-
-### What blockers I have:
-
-1. First scrum, so no blockers yet. 
-
 
 ## Team member name:
 Shikai Jin
@@ -38,11 +29,12 @@ Nanzhu Zhang
 
 ### What I plan to do:
 
-1. Implement the scenario 2, add instructions in the appropriate location. 
+1. Try to implement the scenario 2, add instructions in the appropriate location. 
 2. Build the frame of proxy design pattern.
 3. Complete the class diagram of proxy design pattern. 
 
 ### What blockers I have:
+1. Need to get familiar with greenfoot. 
 
 ## Team Member name:
 Shikai Jin
