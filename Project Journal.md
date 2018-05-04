@@ -47,6 +47,10 @@ Nanzhu Zhang
 ### What blockers I have:
 1. Need to get familiar with greenfoot. 
 
+### XP values:
+Simplicity: Learn to take small simple steps to our goal. Decomposite one kind of composite task to several small easier tasks and try to complete them gradually. 
+
+
 ## Team Member name:
 Shikai Jin
 ### What I did since the last weekly scrum:
