@@ -89,9 +89,10 @@ Rui Guo
 ### What I plan to do:
 
 1. Try to finish scenario 5, and use appropriate classes and images.
+2. Build the frame of Factory design pattern.
 
 ### What blockers I have:
-1. Need  
+Be familiar with greenfoot. 
 
 ## Team member name:
 
