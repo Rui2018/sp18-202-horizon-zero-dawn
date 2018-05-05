@@ -26,7 +26,8 @@ Rui Guo
 
 1. Discuss with my teammates, and design a game that we are all interested.
 2. Decide the game rules.
-3. Make team plan and personal plan for the project.
+3. Discuss what design patterns we can use.
+4. Make team plan and personal plan for the project.
 
 ## Team member name:
 
@@ -81,12 +82,13 @@ Rui Guo
 
 ### What I did since the last weekly scrum:
 
-1. Decided t 
+1. Find the suitable solution of the problem, and be familiared with the game flow.
+2. Decided to implement the scenario 5, and use factory method pattern to create energies in different scenarios.
 
 
 ### What I plan to do:
 
-1. Try 
+1. Try to finish scenario 5, and use appropriate classes and images.
 
 ### What blockers I have:
 1. Need  
