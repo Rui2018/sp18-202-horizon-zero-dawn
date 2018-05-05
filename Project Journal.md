@@ -4,47 +4,40 @@
 Communication: Talk with all the team members and exchange our ideas on what kind of game we want to make. Figure out the best plane that will suit and envolve everyone in our team together. 
 
 ## Team member name:
-
 Nanzhu Zhang
 
 ### What I plan to do:
-
 1. Discuss with my team members and decide what game we plane to build and the basic rules of the game.
 2. Once decided, start to build basic classes needed for the game and choose a design pattern that suit our game. 
 
 ## Team member name:
 Shikai Jin
+
 ### What I plan to do
 1. Discuss withe teamates to find a game design for this project
 2. Setting my personal develop schedule for the project in the following month
 
 ## Team member name:
-
 Rui Guo
 
 ### What I plan to do:
-
 1. Discuss with my teammates, and design a game that we are all interested.
 2. Decide the game rules.
 3. Discuss what design patterns we can use.
 4. Make team plan and personal plan for the project.
 
 ## Team member name:
-
 Fan Wu
 
 ### What I plan to do:
-
 1. Discuss with teammates.
 2. Research for game ideas/baseline, design patterns that we could use.
 3. Research for game flow, game design.
 
 ## Team member name:
-
 Yanjun Zang
 
 ### What I plan to do:
-
 1. Discuss with teammates to decide what game we will create.
 2. Research tutorials to be familiar with greenfoot.
 3. Try to write a sample game as a practice to get more familiar with greenfoot engine.
@@ -58,17 +51,13 @@ ___
 Simplicity: Learn to take small simple steps to our goal. Decomposite one kind of composite task to several small easier tasks and try to complete them gradually. 
 
 ## Team member name:
-
 Nanzhu Zhang
 
 ### What I did since the last weekly scrum:
-
 1. Decided to build game scenario 2 which will include instructions which will show the players how to play the game. 
 2. Choose proxy design pattern for our game. That is only the players who paid for the game(have the password to the game) will be able to enter the game. 
 
-
 ### What I plan to do:
-
 1. Try to implement the scenario 2, add instructions in the appropriate location. 
 2. Build the frame of proxy design pattern.
 3. Complete the class diagram of proxy design pattern. 
@@ -76,38 +65,37 @@ Nanzhu Zhang
 ### What blockers I have:
 1. Need to get familiar with greenfoot. 
 
-
 ## Team Member name:
 Shikai Jin
+
 ### What I did since the last weekly scrum:
 1. Read understanding the basic code structure set by Yanjun
 2. Try to write the basic structure for scenairo 4
+
 ### What I plan to do:
 1. Finish scenario 4, adding images for the star and background etc. in this level
 2. Add functions to let the jumper be able to go with the ground in the scene rather than standing still when the ground is moving
+
 ### What blockers I have:
 The greenfoot structure needs some time to understand and transform into the shape I need it be.
 
 ## Team member name:
-
 Rui Guo
 
 ### What I did since the last weekly scrum:
-
 1. Find the suitable solution of the problem, and be familiared with the game flow.
 2. Decided to implement the scenario 5, and use factory method pattern to create energies in different scenarios.
-
+3. Find some image for the game.
 
 ### What I plan to do:
-
 1. Try to finish scenario 5, and use appropriate classes and images.
 2. Build the frame of Factory design pattern.
+3. Learn some toturials of greenfoot.
 
 ### What blockers I have:
 Be familiar with greenfoot. 
 
 ## Team member name:
-
 Fan Wu
 
 ### What I did since the last weekly scrum:
@@ -122,7 +110,6 @@ Fan Wu
 1. Familiarize with greenfoot.
 
 ## Team member name:
-
 Yanjun Zang
 
 ### What I did since the last weekly scrum:
@@ -145,33 +132,28 @@ ___
 Respect: Respect everyone as a valued team member. Every is trying their best to make progress for our project. We all contribute value to our team.  
 
 ## Team member name:
-
 Nanzhu Zhang
 
 ### What I did since the last weekly scrum:
-
 1. Added all the instructions for the players. 
 2. Make the instructions disappear if the jumper passed through. 
 3. Added a TitleScreen to the game which implements the proxy interface. 
 4. Added a dialog box to interact with the player so the input can be read in from the player to verify the password. 
 5. Proxy class diagram. 
 
-
 ### What I plan to do:
-
 1. Complete the instruction, change the format so it suits the game.
 2. Change the rules of this scenario so it will be easier than the rest scenarios.
 3. Complete the proxy part. Check password entered by the player, if right enter the game otherwise stay in this page. 
 4. Complete use case and sequence diagram of the “enter the game” use case. 
 
-
 ### What blockers I have:
-
 1. Tried several different strategies but still cannot make the instructions be invisible at the beginning and then appear when the jumper getting closer.
 2. The cancel button in the popup screen will cause problem. 
 
 ## Team member name:
 Shikai Jin
+
 ### What I did since the last weekly scrum:
 1. Finsh the scenario 4 in the game
 2. Change the behavior of the ground to make the jumper be able to go with the ground
@@ -184,22 +166,31 @@ Shikai Jin
 1. Tried to apply observer pattern to the ground-jumper pair and failed due to greenfoot deisng for actors
 
 ## Team member name:
-
 Rui Guo
 
 ### What I did since the last weekly scrum:
-
-1. Added  
-
+1. Almost complete scenario 5.
+2. The jumper can move left and right, shoot and fall.
+3. The StarForest move randomly, and rebound the opposite direction when they meet the edge of the world. When the star meets the jumper, it will disappear, and the score will increase.
+4. The ground can move left and right with different speed, and move to the opposite direction when meet the edge of the world.
+5. The jumper can move with the ground when it is on the ground.
+6. The enemies are created one by one every two seconds, and move to the jumper.
+7. The jumper can shoot, and the bullet will kill the enemy.
+8. Almost finish the factory pattern.
 
 ### What I plan to do:
-
-1. Complete
-
+1. In order to make it more diffcult, add some stones, when the jumper meets the stone, it will die.
+2. Complete factory pattern.
+3. Merge my scenatio with other scenarios.
+4. Add some cute images.
+5. Fix bugs existed.
 
 ### What blockers I have:
-
-1. Tried  
+1. The jumper cannot shoot.
+2. The jumper cannot always move with the ground.
+3. The ground would move out of the world.
+4. The bullet would not disappear when it is at the edge.
+5. The sound play had some problems.
 
 ## Team member name:
 Fan Wu
@@ -255,21 +246,16 @@ ___
 Courage: Need to tell the truth about progress. During the last sprint, we combined our work together thus a lot of problems happened. We have to have the courage the tell the truth where the problem is and how to solve it. We have to adapt to changes to the work we've done. 
 
 ## Team member name:
-
 Nanzhu Zhang
 
 ### What I did since the last weekly scrum:
-
 1. Solved the problem, make the instructions appear when the jumper getting closer.
 2. Completed the proxy pattern. 
 3. Completed the diagrams. 
 4. Resolved the problem with the cancel button in the popup screen. 
 
-
 ### What I plan to do:
-
 1. Discuss with my team members on how to make our ad video. 
-
 
 ## Team member name:
 Shikai Jin
@@ -286,22 +272,28 @@ Finish all the left tasks in the project
 1. Some requiremnts are not clear enough, needs some time to get the concept built.
 
 ## Team member name:
-
 Rui Guo
 
 ### What I did since the last weekly scrum:
-
-1. Solved  
-
+1. Fixed bugs in the project and made the game more smooth.
+2. The stones are created randomly at the top of the world, and fall in a certain speed. When it hits the jumper, the jumper will die.
+3. Modified the act of the carrots(class starForest), so that it will rebound to the opposite direction when meet other objects except for the jumper. It is more difficult to "eat" all the carrots(class starForest).
+4. Realize the exchange between different scenarios. When the jumper "eat" all the stars in current scenario, it will enter next level(scenario) automatically.
+5. Modify some classes and parameters.
+6. Finish factory design pattern.
+7. Add some images to decorated the scenario.
+8. Drew some diagrams.
 
 ### What I plan to do:
-
-1. Discuss 
+1. Draw diagrams.
+2. Finish other documents.
 
 ### What blockers I have:
+Need some time to build the concept on some requirments.
 
 ## Team member name:
 Fan Wu
+
 ### What I did since the last weekly scrum:
 1. Made progress merging the project.
 2. Debug the game.
@@ -315,6 +307,7 @@ Fan Wu
 
 ## Team member name:
 Yanjun Zang
+
 ### What I did since the last weekly scrum:
 1. Fix bugs of changing world, game can not start automatically after world changes.
 2. Reorganize whole game, such as remove redundent jumper, remove other useless ground and refactor star class.
