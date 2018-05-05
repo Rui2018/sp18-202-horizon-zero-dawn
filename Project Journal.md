@@ -100,7 +100,6 @@ Rui Guo
 
 ### What I plan to do:
 
-<<<<<<< HEAD
 1. Try to finish scenario 5, and use appropriate classes and images.
 2. Build the frame of Factory design pattern.
 
