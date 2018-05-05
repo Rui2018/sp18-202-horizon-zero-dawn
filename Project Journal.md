@@ -1,5 +1,8 @@
 # Horizon-Zero-Dawn, Sprint #1
 
+## XP values:
+Communication: We communicate face to face or online everyday to find the most suitable game. We exchange our ideas to create the best solution to our problem.
+
 ## Team member name:
 
 Nanzhu Zhang
@@ -27,9 +30,6 @@ Rui Guo
 1. Discuss with my teammates, and design a game that we are all interested.
 2. Decide the game rules.
 3. Make team plan and personal plan for the project.
-
-### XP values:
-Communication: We communicate face to face or online everyday to find the most suitable game. We exchange our ideas to create the best solution to our problem.
 
 ## Team member name:
 
