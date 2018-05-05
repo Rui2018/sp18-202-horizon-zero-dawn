@@ -170,16 +170,13 @@ Rui Guo
 
 ### What I did since the last weekly scrum:
 1. Almost complete scenario 5.
-2. The jumper can move left and right, shoot and fall.
-3. The StarForest move randomly, and rebound the opposite direction when they meet the edge of the world. When the star meets the jumper, it will disappear, and the score will increase.
-4. The ground can move left and right with different speed, and move to the opposite direction when meet the edge of the world.
-5. The jumper can move with the ground when it is on the ground.
-6. The enemies are created one by one every two seconds, and move to the jumper.
-7. The jumper can shoot, and the bullet will kill the enemy.
-8. Almost finish the factory pattern.
+2. Realize the functions in different classes in the project, such as Jumper, StarForest, Ground, Enemy, Score.
+3. Fix the bugs to make the jumper move with the ground when it is on the moving ground.
+4. In order to increase the difficulty of the scenario, add some stones, when the jumper meets the stone, it will die.
+5. Almost finish the factory pattern.
 
 ### What I plan to do:
-1. In order to make it more diffcult, add some stones, when the jumper meets the stone, it will die.
+1. In order to make it more diffcult, modify the act method of StarForest so that it is harder to be "eated".
 2. Complete factory pattern.
 3. Merge my scenatio with other scenarios.
 4. Add some cute images.
@@ -201,7 +198,8 @@ Fan Wu
 
 ### What I plan to do:
 1. Implement command pattern.
-2. Merge the senario with rest of the project.
+2. Discuss with my teammates to set the appropriate sequence of scenarios.
+3. Merge the senario with the rest of the project.
 
 ### What blockers I have:
 1. Implement command pattern with proxy pattern involved.
@@ -276,7 +274,7 @@ Rui Guo
 
 ### What I did since the last weekly scrum:
 1. Fixed bugs in the project and made the game more smooth.
-2. The stones are created randomly at the top of the world, and fall in a certain speed. When it hits the jumper, the jumper will die.
+2. Created the stones at random place at the top of the world, and fall in a certain speed. 
 3. Modified the act of the carrots(class starForest), so that it will rebound to the opposite direction when meet other objects except for the jumper. It is more difficult to "eat" all the carrots(class starForest).
 4. Realize the exchange between different scenarios. When the jumper "eat" all the stars in current scenario, it will enter next level(scenario) automatically.
 5. Modify some classes and parameters.
@@ -286,10 +284,11 @@ Rui Guo
 
 ### What I plan to do:
 1. Draw diagrams.
-2. Finish other documents.
+2. Finish other documents and requirements.
 
 ### What blockers I have:
-Need some time to build the concept on some requirments.
+1. When chenging the world, the music cannot play continuously.
+2. Need some time to build the concept on some requirments.
 
 ## Team member name:
 Fan Wu
