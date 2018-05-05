@@ -39,6 +39,18 @@ Fan Wu
 2. Research for game ideas/baseline, design patterns that we could use.
 3. Research for game flow, game design.
 
+## Team member name:
+
+Yanjun Zang
+
+### What I plan to do:
+
+1. Discuss with teammates to decide what game we will create.
+2. Research tutorials to be familiar with greenfoot.
+3. Try to write a sample game as a practice to get more familiar with greenfoot engine.
+4. Find image sources used for game.
+5. Decide the game rules with teammates.
+
 ___
 # Horizon-Zero-Dawn, Sprint #2
 
@@ -88,6 +100,7 @@ Rui Guo
 
 ### What I plan to do:
 
+<<<<<<< HEAD
 1. Try to finish scenario 5, and use appropriate classes and images.
 2. Build the frame of Factory design pattern.
 
@@ -108,6 +121,24 @@ Fan Wu
 
 ### What blockers I have:
 1. Familiarize with greenfoot.
+
+## Team member name:
+
+Yanjun Zang
+
+### What I did since the last weekly scrum:
+1. Learned some tutorials to be familiar with greenfoot, such as youtube videos, greenfoot community.
+2. Developed a dice game. Generate random numbers reflecting by dice images.
+3. Charactor can moves according to the value of dice.
+3. Find image sources used for game.
+
+### What I plan to do:
+1. Implement the prototype game, called jump & eat.
+2. Apply one of the design pattern to the game.
+
+### What blockers I have:
+1. An actor in the dice game can not move smoothly, there are some bugs.
+
 ___
 # Horizon-Zero-Dawn, Sprint #3
 
@@ -185,6 +216,38 @@ Fan Wu
 ### What blockers I have:
 1. Implement command pattern with proxy pattern involved.
 
+## Team member name:
+Yanjun Zang
+
+### What I did since the last weekly scrum:
+1. Almost complete the prototype.
+2. Jumper can move left, right and jump or fall to a ground with some gravity.
+3. Apply observer pattern to jumper and enemy. Enemy will always move towards to jumper to "kill" jumper.
+4. Enemy generation policy: Every one second, from left bottom or right bottom.
+5. Star are distributed and move randomly all around the screen.
+6. Some grounds are still, while some grounds can move with different speed. Also, if ground touch the edge of the world, it will change the direction to move.
+7. Add game over image and sound effect when jumper touch an enemy or fall over.
+8. Add win image and sound effect when jumper eat all stars.
+9. Jumper can shoot, when the bullet touch an enemy, the enemy will disappear.
+10. Jumper can catch star, the star will disappear and jumper get one score.
+11. Show the score at the right top corner.
+12. Add "nyan_cat" as a background music playing in loop until game end.
+13. Add sound effects for the actions: jump, shoot, eating stars.
+
+### What I plan to do:
+1. Final integration and test.
+2. Fix bugs.
+3. Refactor.
+
+### What blockers I have:
+1. Bullet can not move after being generated.
+2. Bullet should move to the direction where the jumper is facing, but the bullet is not moving as expected.
+3. Ground will move out of scope.
+4. Jumper is not standing on the ground exactly, there are several pixel gap between then.
+5. Music can not stop with game ends.
+6. Bullets move out of the scope.
+7. Jumper can not fall down when stepping out of the ground.
+8. The game doesn't end when jumper falls to the bottom edge.
 
 ___
 # Horizon-Zero-Dawn, Sprint #4
@@ -250,3 +313,24 @@ Fan Wu
 2. Smoothen the game flow.
 
 ### What blockers I have:
+
+## Team member name:
+Yanjun Zang
+### What I did since the last weekly scrum:
+1. Fix bugs of changing world, game can not start automatically after world changes.
+2. Reorganize whole game, such as remove redundent jumper, remove other useless ground and refactor star class.
+3. After merging, music cannot stop and game cannot stop nomarlly, so add state class to record game status.
+4. Fix bug when in instruction world, that the game over appear when jumper falls down.
+5. Applay two game over strategies for instruction levels and normal levels, in instruction levels, jumper won't die and game can restart from current level automatically; in normal levels jumper has only one chance.
+6. Stop playing music until typing the password.
+7. Before all worlds share one background music from level one, while now all levels can start their own background music when game starts(same music file) and game stops music stops.
+8. Change parameters: jumpstrenth value, music volume, ground position and speed.
+
+### What I plan to do:
+1. Draw diagrams.
+2. Write reports.
+
+### What blockers I have:
+1. Music still plays when game over.
+2. Need to distinguish instruction levels and normal levels.
+
