@@ -38,8 +38,6 @@ Fan Wu
 2. Research for game ideas/baseline, design patterns that we could use.
 3. Research for game flow, game design.
 
-### XP values:
-//
 ___
 # Horizon-Zero-Dawn, Sprint #2
 
@@ -92,6 +90,21 @@ Rui Guo
 
 ### What blockers I have:
 1. Need  
+
+## Team member name:
+
+Fan Wu
+
+### What I did since the last weekly scrum:
+1. Researched for several game ideas, familiarized myself with game design/flow.
+2. Came up with the basic idea of first senario.
+
+### What I plan to do:
+1. Implement first senario for moving instruction.
+2. Implement the Command design pattern for new/return player.
+
+### What blockers I have:
+1. Familiarize with greenfoot.
 ___
 # Horizon-Zero-Dawn, Sprint #3
 
@@ -154,6 +167,22 @@ Rui Guo
 ### What blockers I have:
 
 1. Tried  
+
+## Team member name:
+Fan Wu
+
+### What I did since the last weekly scrum:
+1. Collaboratee with teammates to complete first senario.
+2. Modify some classes to suit the need of senario 1. (still stars, remove enemy, reset the game when jumper falls)
+
+### What I plan to do:
+1. Implement command pattern.
+2. Merge the senario with rest of the project.
+
+### What blockers I have:
+1. Implement command pattern with proxy pattern involved.
+
+
 ___
 # Horizon-Zero-Dawn, Sprint #4
 
@@ -203,5 +232,18 @@ Rui Guo
 ### What I plan to do:
 
 1. Discuss 
+
+### What blockers I have:
+
+## Team member name:
+Fan Wu
+### What I did since the last weekly scrum:
+1. Made progress merging the project.
+2. Debug the game.
+3. Create diagrams.
+
+### What I plan to do:
+1. Finish up the command pattern.
+2. Smoothen the game flow.
 
 ### What blockers I have:
