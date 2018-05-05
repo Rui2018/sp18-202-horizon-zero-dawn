@@ -34,7 +34,9 @@ Fan Wu
 
 ### What I plan to do:
 
-// 
+1. Discuss with teammates.
+2. Research for game ideas/baseline, design patterns that we could use.
+3. Research for game flow, game design.
 
 ### XP values:
 //
