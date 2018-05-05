@@ -44,6 +44,9 @@ Fan Wu
 ___
 # Horizon-Zero-Dawn, Sprint #2
 
+## XP values:
+Simplicity: Learn to take small simple steps to our goal. Decomposite one kind of composite task to several small easier tasks and try to complete them gradually. 
+
 ## Team member name:
 
 Nanzhu Zhang
@@ -62,9 +65,6 @@ Nanzhu Zhang
 
 ### What blockers I have:
 1. Need to get familiar with greenfoot. 
-
-### XP values:
-Simplicity: Learn to take small simple steps to our goal. Decomposite one kind of composite task to several small easier tasks and try to complete them gradually. 
 
 
 ## Team Member name:
