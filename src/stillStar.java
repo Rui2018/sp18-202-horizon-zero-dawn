@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class stillStar extends Star implements Stars
+public class stillStar extends Star 
 {
     
     public void act() 
