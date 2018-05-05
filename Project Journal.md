@@ -288,7 +288,7 @@ Rui Guo
 
 ### What blockers I have:
 1. When chenging the world, the music cannot play continuously.
-2. Need some time to build the concept on some requirments.
+2. Need some time to finish some requirments.
 
 ## Team member name:
 Fan Wu
